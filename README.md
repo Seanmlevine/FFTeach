@@ -1,1 +1,1 @@
-# AcoustEQ
+# tEachQ
