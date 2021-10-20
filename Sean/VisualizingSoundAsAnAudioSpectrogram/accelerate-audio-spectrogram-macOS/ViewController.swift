@@ -15,6 +15,8 @@ import Accelerate
 class ViewController: NSViewController {
 
     /// The audio spectrogram layer.
+    ///
+    
     let audioSpectrogram = AudioSpectrogram()
     
     override func viewDidLoad() {
