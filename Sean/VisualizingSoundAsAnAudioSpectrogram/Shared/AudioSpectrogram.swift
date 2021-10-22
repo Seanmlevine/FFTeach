@@ -4,6 +4,7 @@ See LICENSE folder for this sample’s licensing information.
 Abstract:
 Class that generates a spectrogram from an audio signal.
 */
+
 import AVFoundation
 import Accelerate
 

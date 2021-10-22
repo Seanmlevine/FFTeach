@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24F7CDE2271F3EB7000A32CA /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F7CDE1271F3EB7000A32CA /* SecondViewController.swift */; };
 		3E30736C2372FF33000F74C3 /* AudioSpectrogram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3073672372FF33000F74C3 /* AudioSpectrogram.swift */; };
 		3E5E85B424BF502D003E22F5 /* AudioSpectrogram+AVCaptureAudioDataOutputSampleBufferDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFEABBD23730E0E00C9AC41 /* AudioSpectrogram+AVCaptureAudioDataOutputSampleBufferDelegate.swift */; };
 		3E5E85B524BF5031003E22F5 /* AudioSpectrogram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3073672372FF33000F74C3 /* AudioSpectrogram.swift */; };
@@ -17,10 +18,16 @@
 		3EDCF0D82372EFE800637FFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EDCF0D72372EFE800637FFF /* Assets.xcassets */; };
 		3EDCF0DB2372EFE800637FFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EDCF0D92372EFE800637FFF /* LaunchScreen.storyboard */; };
 		3EFEABBE23730E0E00C9AC41 /* AudioSpectrogram+AVCaptureAudioDataOutputSampleBufferDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFEABBD23730E0E00C9AC41 /* AudioSpectrogram+AVCaptureAudioDataOutputSampleBufferDelegate.swift */; };
-		7139AB6827107BCE00ADF76E /* VideoEx.mov in Resources */ = {isa = PBXBuildFile; fileRef = 7139AB6727107BCE00ADF76E /* VideoEx.mov */; };
+		717C48F12722718D00B35BFE /* SpectrogramViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717C48F02722718D00B35BFE /* SpectrogramViewController.swift */; };
+		717C48F22722718D00B35BFE /* SpectrogramViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717C48F02722718D00B35BFE /* SpectrogramViewController.swift */; };
+		717C48F42722801400B35BFE /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717C48F32722801400B35BFE /* VideoViewController.swift */; };
+		717C48F52722801400B35BFE /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717C48F32722801400B35BFE /* VideoViewController.swift */; };
+		717C48FA2722878500B35BFE /* VideoEx.mov in Resources */ = {isa = PBXBuildFile; fileRef = 717C48F92722878500B35BFE /* VideoEx.mov */; };
+		717C48FB2722878500B35BFE /* VideoEx.mov in Resources */ = {isa = PBXBuildFile; fileRef = 717C48F92722878500B35BFE /* VideoEx.mov */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		24F7CDE1271F3EB7000A32CA /* SecondViewController.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		3E3073672372FF33000F74C3 /* AudioSpectrogram.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioSpectrogram.swift; sourceTree = "<group>"; };
 		3E5E85A424BF5023003E22F5 /* accelerate-audio-spectrogram-macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "accelerate-audio-spectrogram-macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EDCF0CB2372EFE600637FFF /* accelerate-audio-spectrogram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "accelerate-audio-spectrogram.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -33,7 +40,9 @@
 		3EDCF0DC2372EFE800637FFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3EFEABBD23730E0E00C9AC41 /* AudioSpectrogram+AVCaptureAudioDataOutputSampleBufferDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AudioSpectrogram+AVCaptureAudioDataOutputSampleBufferDelegate.swift"; sourceTree = "<group>"; };
 		61B27D4DF2C017C525F12011 /* SampleCode.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = SampleCode.xcconfig; path = Configuration/SampleCode.xcconfig; sourceTree = "<group>"; };
-		7139AB6727107BCE00ADF76E /* VideoEx.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = VideoEx.mov; path = ../../VideoEx.mov; sourceTree = "<group>"; };
+		717C48F02722718D00B35BFE /* SpectrogramViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpectrogramViewController.swift; sourceTree = "<group>"; };
+		717C48F32722801400B35BFE /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
+		717C48F92722878500B35BFE /* VideoEx.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = VideoEx.mov; sourceTree = "<group>"; };
 		B05426070169D7858B022BFE /* LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		C5A7A3B976288CC302EA224C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -61,6 +70,7 @@
 			children = (
 				3EFEABBD23730E0E00C9AC41 /* AudioSpectrogram+AVCaptureAudioDataOutputSampleBufferDelegate.swift */,
 				3E3073672372FF33000F74C3 /* AudioSpectrogram.swift */,
+				717C48F02722718D00B35BFE /* SpectrogramViewController.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -89,8 +99,10 @@
 		3EDCF0CD2372EFE600637FFF /* accelerate-audio-spectrogram */ = {
 			isa = PBXGroup;
 			children = (
-				7139AB6727107BCE00ADF76E /* VideoEx.mov */,
+				717C48F92722878500B35BFE /* VideoEx.mov */,
 				3EDCF0D22372EFE600637FFF /* ViewController.swift */,
+				24F7CDE1271F3EB7000A32CA /* SecondViewController.swift */,
+				717C48F32722801400B35BFE /* VideoViewController.swift */,
 				3EDCF0CE2372EFE600637FFF /* AppDelegate.swift */,
 				3EDCF0D02372EFE600637FFF /* SceneDelegate.swift */,
 				3EDCF0D42372EFE600637FFF /* Main.storyboard */,
@@ -170,6 +182,7 @@
 					};
 					3EDCF0CA2372EFE600637FFF = {
 						CreatedOnToolsVersion = 11.2;
+						LastSwiftMigration = 1300;
 					};
 				};
 			};
@@ -197,6 +210,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				717C48FB2722878500B35BFE /* VideoEx.mov in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,7 +221,7 @@
 				3EDCF0DB2372EFE800637FFF /* LaunchScreen.storyboard in Resources */,
 				3EDCF0D82372EFE800637FFF /* Assets.xcassets in Resources */,
 				3EDCF0D62372EFE600637FFF /* Main.storyboard in Resources */,
-				7139AB6827107BCE00ADF76E /* VideoEx.mov in Resources */,
+				717C48FA2722878500B35BFE /* VideoEx.mov in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,7 +232,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				717C48F22722718D00B35BFE /* SpectrogramViewController.swift in Sources */,
 				3E5E85B424BF502D003E22F5 /* AudioSpectrogram+AVCaptureAudioDataOutputSampleBufferDelegate.swift in Sources */,
+				717C48F52722801400B35BFE /* VideoViewController.swift in Sources */,
 				3E5E85B524BF5031003E22F5 /* AudioSpectrogram.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -227,8 +243,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24F7CDE2271F3EB7000A32CA /* SecondViewController.swift in Sources */,
 				3EDCF0D32372EFE600637FFF /* ViewController.swift in Sources */,
+				717C48F42722801400B35BFE /* VideoViewController.swift in Sources */,
 				3EDCF0CF2372EFE600637FFF /* AppDelegate.swift in Sources */,
+				717C48F12722718D00B35BFE /* SpectrogramViewController.swift in Sources */,
 				3E30736C2372FF33000F74C3 /* AudioSpectrogram.swift in Sources */,
 				3EDCF0D12372EFE600637FFF /* SceneDelegate.swift in Sources */,
 				3EFEABBE23730E0E00C9AC41 /* AudioSpectrogram+AVCaptureAudioDataOutputSampleBufferDelegate.swift in Sources */,
@@ -267,7 +286,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = F99PDFL89P;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "accelerate-audio-spectrogram-macOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -293,7 +312,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = F99PDFL89P;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "accelerate-audio-spectrogram-macOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -432,6 +451,7 @@
 			baseConfigurationReference = 61B27D4DF2C017C525F12011 /* SampleCode.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F99PDFL89P;
 				INFOPLIST_FILE = "accelerate-audio-spectrogram/Info.plist";
@@ -442,6 +462,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.accelerate-audio-spectrogram${SAMPLE_CODE_DISAMBIGUATOR}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "accelerate-audio-spectrogram/accelerate-audio-spectrogram-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -452,6 +474,7 @@
 			baseConfigurationReference = 61B27D4DF2C017C525F12011 /* SampleCode.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F99PDFL89P;
 				INFOPLIST_FILE = "accelerate-audio-spectrogram/Info.plist";
@@ -462,6 +485,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.accelerate-audio-spectrogram${SAMPLE_CODE_DISAMBIGUATOR}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "accelerate-audio-spectrogram/accelerate-audio-spectrogram-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

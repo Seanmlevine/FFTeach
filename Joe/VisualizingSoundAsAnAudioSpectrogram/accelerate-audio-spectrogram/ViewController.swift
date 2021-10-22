@@ -9,7 +9,6 @@ import AVFoundation
 import Accelerate
 import UIKit
 import AVKit
-import AVFoundation
 
 class ViewController: UIViewController {
     
