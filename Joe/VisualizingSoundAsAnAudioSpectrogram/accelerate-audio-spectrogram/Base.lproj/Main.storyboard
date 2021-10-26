@@ -167,6 +167,7 @@
                     <view key="view" contentMode="scaleToFill" id="Foa-mq-Vms">
                         <rect key="frame" x="0.0" y="0.0" width="355" height="333"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="DbH-M1-8b6"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                 </viewController>
@@ -181,6 +182,7 @@
                     <view key="view" contentMode="scaleToFill" id="WG8-MI-cgs">
                         <rect key="frame" x="0.0" y="0.0" width="335" height="298"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="yFB-Da-pci"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                 </viewController>

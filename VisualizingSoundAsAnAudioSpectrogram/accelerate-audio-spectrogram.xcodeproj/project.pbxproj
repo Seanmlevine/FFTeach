@@ -286,7 +286,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = F99PDFL89P;
+				DEVELOPMENT_TEAM = J4DS5LF993;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "accelerate-audio-spectrogram-macOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -312,7 +312,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = F99PDFL89P;
+				DEVELOPMENT_TEAM = J4DS5LF993;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "accelerate-audio-spectrogram-macOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -453,7 +453,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = F99PDFL89P;
+				DEVELOPMENT_TEAM = J4DS5LF993;
 				INFOPLIST_FILE = "accelerate-audio-spectrogram/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -476,7 +476,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = F99PDFL89P;
+				DEVELOPMENT_TEAM = J4DS5LF993;
 				INFOPLIST_FILE = "accelerate-audio-spectrogram/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

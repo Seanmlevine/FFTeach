@@ -83,5 +83,113 @@
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "36284DDA-2A03-41C7-9F11-08A3587B43E2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "accelerate-audio-spectrogram/TempiFFT/SpectralViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "SpectralViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "36284DDA-2A03-41C7-9F11-08A3587B43E2 - 7b7fc164e4ec0dc7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "accelerate_audio_spectrogram.SpectralViewController.audioInput.getter : Swift.Optional&lt;accelerate_audio_spectrogram.TempiAudioInput&gt;"
+                  moduleName = "accelerate-audio-spectrogram"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/seanlevine/Documents/GitHub/FFTeach/Sean/VisualizingSoundAsAnAudioSpectrogram/accelerate-audio-spectrogram/TempiFFT/SpectralViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "94">
+               </Location>
+               <Location
+                  uuid = "36284DDA-2A03-41C7-9F11-08A3587B43E2 - 8837dd3d95182513"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "accelerate_audio_spectrogram.SpectralViewController.audioInput.setter : Swift.Optional&lt;accelerate_audio_spectrogram.TempiAudioInput&gt;"
+                  moduleName = "accelerate-audio-spectrogram"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/seanlevine/Documents/GitHub/FFTeach/Sean/VisualizingSoundAsAnAudioSpectrogram/accelerate-audio-spectrogram/TempiFFT/SpectralViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "132">
+               </Location>
+               <Location
+                  uuid = "36284DDA-2A03-41C7-9F11-08A3587B43E2 - 17af0f32f794e000"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "accelerate_audio_spectrogram.SpectralViewController.audioInput.modify : Swift.Optional&lt;accelerate_audio_spectrogram.TempiAudioInput&gt;"
+                  moduleName = "accelerate-audio-spectrogram"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/seanlevine/Documents/GitHub/FFTeach/Sean/VisualizingSoundAsAnAudioSpectrogram/accelerate-audio-spectrogram/TempiFFT/SpectralViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "27">
+               </Location>
+               <Location
+                  uuid = "36284DDA-2A03-41C7-9F11-08A3587B43E2 - a313df25bd052413"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "accelerate_audio_spectrogram.SpectralViewController.audioInput.modify : Swift.Optional&lt;accelerate_audio_spectrogram.TempiAudioInput&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "accelerate-audio-spectrogram"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/seanlevine/Documents/GitHub/FFTeach/Sean/VisualizingSoundAsAnAudioSpectrogram/accelerate-audio-spectrogram/TempiFFT/SpectralViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "15">
+               </Location>
+               <Location
+                  uuid = "36284DDA-2A03-41C7-9F11-08A3587B43E2 - 927e14db8d5d4337"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "accelerate_audio_spectrogram.SpectralViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; accelerate_audio_spectrogram.SpectralViewController"
+                  moduleName = "accelerate-audio-spectrogram"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/seanlevine/Documents/GitHub/FFTeach/Sean/VisualizingSoundAsAnAudioSpectrogram/accelerate-audio-spectrogram/TempiFFT/SpectralViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "170">
+               </Location>
+               <Location
+                  uuid = "36284DDA-2A03-41C7-9F11-08A3587B43E2 - 19b52c20ddca2f75"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "accelerate_audio_spectrogram.SpectralViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;accelerate_audio_spectrogram.SpectralViewController&gt;"
+                  moduleName = "accelerate-audio-spectrogram"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/seanlevine/Documents/GitHub/FFTeach/Sean/VisualizingSoundAsAnAudioSpectrogram/accelerate-audio-spectrogram/TempiFFT/SpectralViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "127">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
