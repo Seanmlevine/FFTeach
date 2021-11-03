@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2410FF352731AD1900128083 /* TempiDebug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2410FF2C2731AD1700128083 /* TempiDebug.swift */; };
+		2410FF372731AD1900128083 /* SpectralView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2410FF2E2731AD1800128083 /* SpectralView.swift */; };
+		2410FF392731AD1900128083 /* TempiAudioInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2410FF302731AD1800128083 /* TempiAudioInput.swift */; };
+		2410FF3A2731AD1900128083 /* TempiFFT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2410FF312731AD1800128083 /* TempiFFT.swift */; };
+		2410FF3B2731AD1900128083 /* TempiUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2410FF322731AD1800128083 /* TempiUtilities.swift */; };
+		2410FF3C2731AD1900128083 /* SpectralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2410FF332731AD1800128083 /* SpectralViewController.swift */; };
 		24F7CDE2271F3EB7000A32CA /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F7CDE1271F3EB7000A32CA /* SecondViewController.swift */; };
 		3E30736C2372FF33000F74C3 /* AudioSpectrogram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3073672372FF33000F74C3 /* AudioSpectrogram.swift */; };
 		3E5E85B424BF502D003E22F5 /* AudioSpectrogram+AVCaptureAudioDataOutputSampleBufferDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFEABBD23730E0E00C9AC41 /* AudioSpectrogram+AVCaptureAudioDataOutputSampleBufferDelegate.swift */; };
@@ -35,6 +41,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2410FF2C2731AD1700128083 /* TempiDebug.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TempiDebug.swift; sourceTree = "<group>"; };
+		2410FF2E2731AD1800128083 /* SpectralView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpectralView.swift; sourceTree = "<group>"; };
+		2410FF302731AD1800128083 /* TempiAudioInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TempiAudioInput.swift; sourceTree = "<group>"; };
+		2410FF312731AD1800128083 /* TempiFFT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TempiFFT.swift; sourceTree = "<group>"; };
+		2410FF322731AD1800128083 /* TempiUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TempiUtilities.swift; sourceTree = "<group>"; };
+		2410FF332731AD1800128083 /* SpectralViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpectralViewController.swift; sourceTree = "<group>"; };
 		24F7CDE1271F3EB7000A32CA /* SecondViewController.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		3E3073672372FF33000F74C3 /* AudioSpectrogram.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioSpectrogram.swift; sourceTree = "<group>"; };
 		3E5E85A424BF5023003E22F5 /* accelerate-audio-spectrogram-macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "accelerate-audio-spectrogram-macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,6 +95,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2410FF2B2731AD0800128083 /* Tempi Folder */ = {
+			isa = PBXGroup;
+			children = (
+				2410FF2E2731AD1800128083 /* SpectralView.swift */,
+				2410FF332731AD1800128083 /* SpectralViewController.swift */,
+				2410FF302731AD1800128083 /* TempiAudioInput.swift */,
+				2410FF2C2731AD1700128083 /* TempiDebug.swift */,
+				2410FF312731AD1800128083 /* TempiFFT.swift */,
+				2410FF322731AD1800128083 /* TempiUtilities.swift */,
+			);
+			path = "Tempi Folder";
+			sourceTree = "<group>";
+		};
 		3E5E85B624BF5271003E22F5 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +143,7 @@
 		3EDCF0CD2372EFE600637FFF /* accelerate-audio-spectrogram */ = {
 			isa = PBXGroup;
 			children = (
+				2410FF2B2731AD0800128083 /* Tempi Folder */,
 				3EDCF0D22372EFE600637FFF /* ViewController.swift */,
 				71FD0947272618F1000156E4 /* VideoViewController1.swift */,
 				71FD094927261908000156E4 /* VideoViewController2.swift */,
@@ -282,15 +308,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2410FF3C2731AD1900128083 /* SpectralViewController.swift in Sources */,
+				2410FF392731AD1900128083 /* TempiAudioInput.swift in Sources */,
 				24F7CDE2271F3EB7000A32CA /* SecondViewController.swift in Sources */,
+				2410FF352731AD1900128083 /* TempiDebug.swift in Sources */,
 				71FD095027261932000156E4 /* VideoViewController5.swift in Sources */,
+				2410FF3A2731AD1900128083 /* TempiFFT.swift in Sources */,
 				71FD0948272618F1000156E4 /* VideoViewController1.swift in Sources */,
 				3EDCF0D32372EFE600637FFF /* ViewController.swift in Sources */,
+				2410FF372731AD1900128083 /* SpectralView.swift in Sources */,
 				71FD094E27261920000156E4 /* VideoViewController4.swift in Sources */,
 				3EDCF0CF2372EFE600637FFF /* AppDelegate.swift in Sources */,
 				717C48F12722718D00B35BFE /* SpectrogramViewController.swift in Sources */,
 				3E30736C2372FF33000F74C3 /* AudioSpectrogram.swift in Sources */,
 				71FD094A27261908000156E4 /* VideoViewController2.swift in Sources */,
+				2410FF3B2731AD1900128083 /* TempiUtilities.swift in Sources */,
 				3EDCF0D12372EFE600637FFF /* SceneDelegate.swift in Sources */,
 				71FD09522726194B000156E4 /* VideoViewController6.swift in Sources */,
 				3EFEABBE23730E0E00C9AC41 /* AudioSpectrogram+AVCaptureAudioDataOutputSampleBufferDelegate.swift in Sources */,
