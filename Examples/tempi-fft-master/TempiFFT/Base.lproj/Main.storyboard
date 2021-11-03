@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oSh-f4-J0L">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Spectral View Controller-->
+        <scene sceneID="eMj-nc-igB">
+            <objects>
+                <viewController id="oSh-f4-J0L" customClass="SpectralViewController" customModule="TempiFFT" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Y01-iP-rLj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R8I-EQ-jrP" customClass="SpectralView" customModule="TempiFFT" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="mwB-Ez-dvU"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="mwB-Ez-dvU" firstAttribute="trailing" secondItem="R8I-EQ-jrP" secondAttribute="trailing" id="5bU-Rt-HTE"/>
+                            <constraint firstItem="R8I-EQ-jrP" firstAttribute="top" secondItem="mwB-Ez-dvU" secondAttribute="top" id="YmS-td-RoL"/>
+                            <constraint firstItem="R8I-EQ-jrP" firstAttribute="leading" secondItem="mwB-Ez-dvU" secondAttribute="leading" id="guX-Zu-wRG"/>
+                            <constraint firstItem="mwB-Ez-dvU" firstAttribute="bottom" secondItem="R8I-EQ-jrP" secondAttribute="bottom" id="n1o-b3-JV4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="spectralView" destination="R8I-EQ-jrP" id="5nw-Pd-zDK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="srV-vq-50F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="367" y="15"/>
+        </scene>
+    </scenes>
+</document>
