@@ -13,13 +13,15 @@
 		2410FF3A2731AD1900128083 /* TempiFFT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2410FF312731AD1800128083 /* TempiFFT.swift */; };
 		2410FF3B2731AD1900128083 /* TempiUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2410FF322731AD1800128083 /* TempiUtilities.swift */; };
 		2410FF3C2731AD1900128083 /* SpectralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2410FF332731AD1800128083 /* SpectralViewController.swift */; };
+		2443F05827333C970098DF79 /* VideoContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2443F05727333C970098DF79 /* VideoContainer.swift */; };
+		2443F05C27333FDC0098DF79 /* MultiVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2443F05B27333FDC0098DF79 /* MultiVideoViewController.swift */; };
 		24F7CDE2271F3EB7000A32CA /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F7CDE1271F3EB7000A32CA /* SecondViewController.swift */; };
 		3E30736C2372FF33000F74C3 /* AudioSpectrogram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3073672372FF33000F74C3 /* AudioSpectrogram.swift */; };
 		3E5E85B424BF502D003E22F5 /* AudioSpectrogram+AVCaptureAudioDataOutputSampleBufferDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFEABBD23730E0E00C9AC41 /* AudioSpectrogram+AVCaptureAudioDataOutputSampleBufferDelegate.swift */; };
 		3E5E85B524BF5031003E22F5 /* AudioSpectrogram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3073672372FF33000F74C3 /* AudioSpectrogram.swift */; };
 		3EDCF0CF2372EFE600637FFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDCF0CE2372EFE600637FFF /* AppDelegate.swift */; };
 		3EDCF0D12372EFE600637FFF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDCF0D02372EFE600637FFF /* SceneDelegate.swift */; };
-		3EDCF0D32372EFE600637FFF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDCF0D22372EFE600637FFF /* ViewController.swift */; };
+		3EDCF0D32372EFE600637FFF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDCF0D22372EFE600637FFF /* MainViewController.swift */; };
 		3EDCF0D62372EFE600637FFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EDCF0D42372EFE600637FFF /* Main.storyboard */; };
 		3EDCF0D82372EFE800637FFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EDCF0D72372EFE800637FFF /* Assets.xcassets */; };
 		3EDCF0DB2372EFE800637FFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EDCF0D92372EFE800637FFF /* LaunchScreen.storyboard */; };
@@ -32,12 +34,6 @@
 		71FD094227261654000156E4 /* Snare.mov in Resources */ = {isa = PBXBuildFile; fileRef = 71FD094127261654000156E4 /* Snare.mov */; };
 		71FD094427261659000156E4 /* SongFile.mov in Resources */ = {isa = PBXBuildFile; fileRef = 71FD094327261659000156E4 /* SongFile.mov */; };
 		71FD09462726165E000156E4 /* SquareWave.mov in Resources */ = {isa = PBXBuildFile; fileRef = 71FD09452726165E000156E4 /* SquareWave.mov */; };
-		71FD0948272618F1000156E4 /* VideoViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FD0947272618F1000156E4 /* VideoViewController1.swift */; };
-		71FD094A27261908000156E4 /* VideoViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FD094927261908000156E4 /* VideoViewController2.swift */; };
-		71FD094C27261915000156E4 /* VideoViewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FD094B27261915000156E4 /* VideoViewController3.swift */; };
-		71FD094E27261920000156E4 /* VideoViewController4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FD094D27261920000156E4 /* VideoViewController4.swift */; };
-		71FD095027261932000156E4 /* VideoViewController5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FD094F27261932000156E4 /* VideoViewController5.swift */; };
-		71FD09522726194B000156E4 /* VideoViewController6.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FD09512726194B000156E4 /* VideoViewController6.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,13 +43,15 @@
 		2410FF312731AD1800128083 /* TempiFFT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TempiFFT.swift; sourceTree = "<group>"; };
 		2410FF322731AD1800128083 /* TempiUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TempiUtilities.swift; sourceTree = "<group>"; };
 		2410FF332731AD1800128083 /* SpectralViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpectralViewController.swift; sourceTree = "<group>"; };
+		2443F05727333C970098DF79 /* VideoContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VideoContainer.swift; path = ../../../../../VideoContainer.swift; sourceTree = "<group>"; };
+		2443F05B27333FDC0098DF79 /* MultiVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiVideoViewController.swift; sourceTree = "<group>"; };
 		24F7CDE1271F3EB7000A32CA /* SecondViewController.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		3E3073672372FF33000F74C3 /* AudioSpectrogram.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioSpectrogram.swift; sourceTree = "<group>"; };
 		3E5E85A424BF5023003E22F5 /* accelerate-audio-spectrogram-macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "accelerate-audio-spectrogram-macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EDCF0CB2372EFE600637FFF /* accelerate-audio-spectrogram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "accelerate-audio-spectrogram.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EDCF0CE2372EFE600637FFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3EDCF0D02372EFE600637FFF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3EDCF0D22372EFE600637FFF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3EDCF0D22372EFE600637FFF /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		3EDCF0D52372EFE600637FFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3EDCF0D72372EFE800637FFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3EDCF0DA2372EFE800637FFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -67,12 +65,6 @@
 		71FD094127261654000156E4 /* Snare.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = Snare.mov; sourceTree = "<group>"; };
 		71FD094327261659000156E4 /* SongFile.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = SongFile.mov; sourceTree = "<group>"; };
 		71FD09452726165E000156E4 /* SquareWave.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = SquareWave.mov; sourceTree = "<group>"; };
-		71FD0947272618F1000156E4 /* VideoViewController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController1.swift; sourceTree = "<group>"; };
-		71FD094927261908000156E4 /* VideoViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController2.swift; sourceTree = "<group>"; };
-		71FD094B27261915000156E4 /* VideoViewController3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController3.swift; sourceTree = "<group>"; };
-		71FD094D27261920000156E4 /* VideoViewController4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController4.swift; sourceTree = "<group>"; };
-		71FD094F27261932000156E4 /* VideoViewController5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController5.swift; sourceTree = "<group>"; };
-		71FD09512726194B000156E4 /* VideoViewController6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController6.swift; sourceTree = "<group>"; };
 		B05426070169D7858B022BFE /* LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		C5A7A3B976288CC302EA224C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -144,13 +136,9 @@
 			isa = PBXGroup;
 			children = (
 				2410FF2B2731AD0800128083 /* Tempi Folder */,
-				3EDCF0D22372EFE600637FFF /* ViewController.swift */,
-				71FD0947272618F1000156E4 /* VideoViewController1.swift */,
-				71FD094927261908000156E4 /* VideoViewController2.swift */,
-				71FD094B27261915000156E4 /* VideoViewController3.swift */,
-				71FD094D27261920000156E4 /* VideoViewController4.swift */,
-				71FD094F27261932000156E4 /* VideoViewController5.swift */,
-				71FD09512726194B000156E4 /* VideoViewController6.swift */,
+				3EDCF0D22372EFE600637FFF /* MainViewController.swift */,
+				2443F05B27333FDC0098DF79 /* MultiVideoViewController.swift */,
+				2443F05727333C970098DF79 /* VideoContainer.swift */,
 				24F7CDE1271F3EB7000A32CA /* SecondViewController.swift */,
 				3EDCF0CE2372EFE600637FFF /* AppDelegate.swift */,
 				3EDCF0D02372EFE600637FFF /* SceneDelegate.swift */,
@@ -312,21 +300,17 @@
 				2410FF392731AD1900128083 /* TempiAudioInput.swift in Sources */,
 				24F7CDE2271F3EB7000A32CA /* SecondViewController.swift in Sources */,
 				2410FF352731AD1900128083 /* TempiDebug.swift in Sources */,
-				71FD095027261932000156E4 /* VideoViewController5.swift in Sources */,
+				2443F05C27333FDC0098DF79 /* MultiVideoViewController.swift in Sources */,
 				2410FF3A2731AD1900128083 /* TempiFFT.swift in Sources */,
-				71FD0948272618F1000156E4 /* VideoViewController1.swift in Sources */,
-				3EDCF0D32372EFE600637FFF /* ViewController.swift in Sources */,
+				3EDCF0D32372EFE600637FFF /* MainViewController.swift in Sources */,
 				2410FF372731AD1900128083 /* SpectralView.swift in Sources */,
-				71FD094E27261920000156E4 /* VideoViewController4.swift in Sources */,
 				3EDCF0CF2372EFE600637FFF /* AppDelegate.swift in Sources */,
 				717C48F12722718D00B35BFE /* SpectrogramViewController.swift in Sources */,
 				3E30736C2372FF33000F74C3 /* AudioSpectrogram.swift in Sources */,
-				71FD094A27261908000156E4 /* VideoViewController2.swift in Sources */,
 				2410FF3B2731AD1900128083 /* TempiUtilities.swift in Sources */,
 				3EDCF0D12372EFE600637FFF /* SceneDelegate.swift in Sources */,
-				71FD09522726194B000156E4 /* VideoViewController6.swift in Sources */,
+				2443F05827333C970098DF79 /* VideoContainer.swift in Sources */,
 				3EFEABBE23730E0E00C9AC41 /* AudioSpectrogram+AVCaptureAudioDataOutputSampleBufferDelegate.swift in Sources */,
-				71FD094C27261915000156E4 /* VideoViewController3.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,7 +12,7 @@
         <!--FFTeach-->
         <scene sceneID="fMc-04-IW4">
             <objects>
-                <viewController id="aqW-gh-XXX" customClass="ViewController" customModule="accelerate_audio_spectrogram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="aqW-gh-XXX" customClass="MainViewController" customModule="accelerate_audio_spectrogram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sy1-P4-qEV">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="756"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -28,9 +28,6 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="310" id="iuq-GM-Taq"/>
                                                 </constraints>
-                                                <connections>
-                                                    <segue destination="Vvn-U1-egU" kind="embed" identifier="ToSpectrogramViewController" id="fuP-DW-Wmd"/>
-                                                </connections>
                                             </containerView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SPECTROGRAM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iRp-dz-Tkt">
                                                 <rect key="frame" x="133" y="8" width="124" height="17"/>
@@ -38,10 +35,25 @@
                                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="OOu-Mu-4rw">
+                                                <rect key="frame" x="20" y="311" width="350" height="32"/>
+                                                <segments>
+                                                    <segment title="512"/>
+                                                    <segment title="1024"/>
+                                                    <segment title="2048"/>
+                                                    <segment title="4096"/>
+                                                </segments>
+                                                <connections>
+                                                    <action selector="segmentedControlChanged:" destination="aqW-gh-XXX" eventType="valueChanged" id="NmK-CO-bZt"/>
+                                                </connections>
+                                            </segmentedControl>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBrownColor"/>
                                         <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="OOu-Mu-4rw" secondAttribute="bottom" constant="9" id="2l2-QM-jck"/>
+                                            <constraint firstAttribute="trailing" secondItem="OOu-Mu-4rw" secondAttribute="trailing" constant="20" symbolic="YES" id="5Ny-up-glL"/>
                                             <constraint firstAttribute="bottom" secondItem="CYQ-SW-GA1" secondAttribute="bottom" constant="20" id="KLp-1I-68k"/>
+                                            <constraint firstItem="OOu-Mu-4rw" firstAttribute="leading" secondItem="g0C-dD-gdn" secondAttribute="leading" constant="20" symbolic="YES" id="KVq-ip-9q0"/>
                                             <constraint firstAttribute="trailing" secondItem="CYQ-SW-GA1" secondAttribute="trailing" constant="20" id="qSg-lY-iu2"/>
                                             <constraint firstItem="CYQ-SW-GA1" firstAttribute="leading" secondItem="g0C-dD-gdn" secondAttribute="leading" constant="20" id="tAN-s6-HI0"/>
                                             <constraint firstItem="CYQ-SW-GA1" firstAttribute="top" secondItem="g0C-dD-gdn" secondAttribute="top" constant="20" id="y71-bd-17k"/>
@@ -92,6 +104,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="spectrogramContainer" destination="CYQ-SW-GA1" id="IKG-or-UoR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sZF-d2-iVZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -115,25 +130,10 @@
             </objects>
             <point key="canvasLocation" x="138.75" y="137.32394366197184"/>
         </scene>
-        <!--Spectrogram View Controller-->
-        <scene sceneID="WkG-TE-uvm">
-            <objects>
-                <viewController id="Vvn-U1-egU" customClass="SpectrogramViewController" customModule="accelerate_audio_spectrogram" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Foa-mq-Vms">
-                        <rect key="frame" x="0.0" y="0.0" width="350" height="305"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="lSl-co-9mp"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oob-aa-tIc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="957" y="671"/>
-        </scene>
-        <!--View Controller-->
+        <!--Multi Video View Controller-->
         <scene sceneID="adp-kO-U3Z">
             <objects>
-                <viewController id="BMO-ja-kR4" sceneMemberID="viewController">
+                <viewController id="BMO-ja-kR4" customClass="MultiVideoViewController" customModule="accelerate_audio_spectrogram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nt6-VV-XHR">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="756"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -150,15 +150,12 @@
                                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zby-nt-F8Y">
                                                         <rect key="frame" x="18.377361993638488" y="40" width="349.99999999999977" height="290"/>
                                                         <subviews>
-                                                            <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="te1-nX-IP2">
+                                                            <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="te1-nX-IP2" customClass="VideoContainer" customModule="accelerate_audio_spectrogram" customModuleProvider="target">
                                                                 <rect key="frame" x="8" y="8" width="334" height="274"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="274" id="Y54-Ie-4Tg"/>
                                                                     <constraint firstAttribute="width" constant="334" id="r1d-ZK-xwn"/>
                                                                 </constraints>
-                                                                <connections>
-                                                                    <segue destination="11v-fb-ZRL" kind="embed" id="Uhc-ig-rU4"/>
-                                                                </connections>
                                                             </containerView>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemPurpleColor"/>
@@ -212,15 +209,12 @@
                                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R5V-l8-g7n">
                                                         <rect key="frame" x="20" y="40" width="349.99999999999966" height="289.99999999999983"/>
                                                         <subviews>
-                                                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="89W-ah-oEi">
+                                                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="89W-ah-oEi" customClass="VideoContainer" customModule="accelerate_audio_spectrogram" customModuleProvider="target">
                                                                 <rect key="frame" x="8" y="8" width="334" height="274"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="334" id="qog-Yl-mWb"/>
                                                                     <constraint firstAttribute="height" constant="274" id="tKU-eK-hce"/>
                                                                 </constraints>
-                                                                <connections>
-                                                                    <segue destination="p4i-oM-KFk" kind="embed" id="blN-7j-ZdF"/>
-                                                                </connections>
                                                             </containerView>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemPurpleColor"/>
@@ -273,15 +267,12 @@
                                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aqx-NC-5Qh">
                                                         <rect key="frame" x="18.79826057085711" y="40" width="350.00000000000023" height="289.99999999999989"/>
                                                         <subviews>
-                                                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zb0-6P-68K">
+                                                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zb0-6P-68K" customClass="VideoContainer" customModule="accelerate_audio_spectrogram" customModuleProvider="target">
                                                                 <rect key="frame" x="8" y="8" width="333" height="274"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="333" id="1Hz-aS-Wse"/>
                                                                     <constraint firstAttribute="height" constant="274" id="tKR-sE-h5n"/>
                                                                 </constraints>
-                                                                <connections>
-                                                                    <segue destination="uT0-lr-zm0" kind="embed" id="Ybq-sp-D0y"/>
-                                                                </connections>
                                                             </containerView>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemPurpleColor"/>
@@ -335,15 +326,12 @@
                                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vfg-ZW-hTq">
                                                         <rect key="frame" x="18.79826057085711" y="40" width="349.99999999999932" height="290"/>
                                                         <subviews>
-                                                            <containerView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5yO-Bq-vV1">
+                                                            <containerView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5yO-Bq-vV1" customClass="VideoContainer" customModule="accelerate_audio_spectrogram" customModuleProvider="target">
                                                                 <rect key="frame" x="7" y="8" width="334" height="274"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="274" id="c6U-Cd-AD7"/>
                                                                     <constraint firstAttribute="width" constant="334" id="sCb-51-kSv"/>
                                                                 </constraints>
-                                                                <connections>
-                                                                    <segue destination="N09-Om-l6a" kind="embed" id="CDY-TL-239"/>
-                                                                </connections>
                                                             </containerView>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemPurpleColor"/>
@@ -392,15 +380,12 @@
                                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qIg-G8-n45">
                                                         <rect key="frame" x="17.603094945370231" y="40" width="350.00000000000011" height="290.00000000000011"/>
                                                         <subviews>
-                                                            <containerView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vc2-w7-LSB">
+                                                            <containerView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vc2-w7-LSB" customClass="VideoContainer" customModule="accelerate_audio_spectrogram" customModuleProvider="target">
                                                                 <rect key="frame" x="5" y="8" width="334" height="274"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="334" id="GOR-aY-nn2"/>
                                                                     <constraint firstAttribute="height" constant="274" id="e3y-Oa-HLm"/>
                                                                 </constraints>
-                                                                <connections>
-                                                                    <segue destination="jPf-Hc-oQa" kind="embed" id="GHW-j6-T7b"/>
-                                                                </connections>
                                                             </containerView>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemPurpleColor"/>
@@ -449,15 +434,12 @@
                                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HVb-am-hPu">
                                                         <rect key="frame" x="18.943217246151107" y="40" width="349.99999999999989" height="290"/>
                                                         <subviews>
-                                                            <containerView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x3b-ie-DpV">
+                                                            <containerView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x3b-ie-DpV" customClass="VideoContainer" customModule="accelerate_audio_spectrogram" customModuleProvider="target">
                                                                 <rect key="frame" x="7" y="8" width="334" height="274"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="334" id="R7W-k2-Juw"/>
                                                                     <constraint firstAttribute="height" constant="274" id="sD0-jv-PEx"/>
                                                                 </constraints>
-                                                                <connections>
-                                                                    <segue destination="6ka-cZ-bgd" kind="embed" id="eO0-vh-Ojf"/>
-                                                                </connections>
                                                             </containerView>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemPurpleColor"/>
@@ -529,100 +511,18 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="OKX-fc-8UI"/>
+                    <connections>
+                        <outletCollection property="containers" destination="te1-nX-IP2" collectionClass="NSMutableArray" id="4Xb-4Q-R1u"/>
+                        <outletCollection property="containers" destination="89W-ah-oEi" collectionClass="NSMutableArray" id="t2A-6x-xk5"/>
+                        <outletCollection property="containers" destination="Zb0-6P-68K" collectionClass="NSMutableArray" id="oyy-ui-eix"/>
+                        <outletCollection property="containers" destination="5yO-Bq-vV1" collectionClass="NSMutableArray" id="Ig6-E2-QnU"/>
+                        <outletCollection property="containers" destination="Vc2-w7-LSB" collectionClass="NSMutableArray" id="wst-oO-fll"/>
+                        <outletCollection property="containers" destination="x3b-ie-DpV" collectionClass="NSMutableArray" id="0S2-HC-NaP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l6M-2e-7os" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1780" y="138.6255924170616"/>
-        </scene>
-        <!--Video View Controller1-->
-        <scene sceneID="Wba-Pq-pFn">
-            <objects>
-                <viewController id="11v-fb-ZRL" customClass="VideoViewController1" customModule="accelerate_audio_spectrogram" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="tvN-I8-Qhd">
-                        <rect key="frame" x="0.0" y="0.0" width="334" height="274"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="jli-AB-QLe"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Oya-JT-T6c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2551" y="137"/>
-        </scene>
-        <!--Video View Controller2-->
-        <scene sceneID="Xzp-oF-1hR">
-            <objects>
-                <viewController id="p4i-oM-KFk" customClass="VideoViewController2" customModule="accelerate_audio_spectrogram" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="6Ij-Di-8n0">
-                        <rect key="frame" x="0.0" y="0.0" width="334" height="274"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="Yob-Mx-eTk"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nhb-ba-wpm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2551" y="380"/>
-        </scene>
-        <!--Video View Controller3-->
-        <scene sceneID="wNq-H2-9qk">
-            <objects>
-                <viewController id="uT0-lr-zm0" customClass="VideoViewController3" customModule="accelerate_audio_spectrogram" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="2vn-SU-XIl">
-                        <rect key="frame" x="0.0" y="0.0" width="333" height="274"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="B4N-qf-9vf"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uAE-lA-MCX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2550" y="630"/>
-        </scene>
-        <!--Video View Controller4-->
-        <scene sceneID="sln-0j-zGi">
-            <objects>
-                <viewController id="N09-Om-l6a" customClass="VideoViewController4" customModule="accelerate_audio_spectrogram" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="xgn-6T-AUJ">
-                        <rect key="frame" x="0.0" y="0.0" width="334" height="274"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="8WK-GH-lwP"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="aKh-D6-u3X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2551" y="874"/>
-        </scene>
-        <!--Video View Controller5-->
-        <scene sceneID="lZ7-fu-eCG">
-            <objects>
-                <viewController id="jPf-Hc-oQa" customClass="VideoViewController5" customModule="accelerate_audio_spectrogram" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5oO-Xo-6JH">
-                        <rect key="frame" x="0.0" y="0.0" width="334" height="274"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="vKf-8m-eA8"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ggG-u2-ORP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1928" y="889"/>
-        </scene>
-        <!--Video View Controller6-->
-        <scene sceneID="f9O-5l-yCm">
-            <objects>
-                <viewController id="6ka-cZ-bgd" customClass="VideoViewController6" customModule="accelerate_audio_spectrogram" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="bah-qp-Ynj">
-                        <rect key="frame" x="0.0" y="0.0" width="334" height="274"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="SH8-eY-8AJ"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MYZ-Tu-HxT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1928" y="630"/>
         </scene>
         <!--Spectral View Controller-->
         <scene sceneID="d1l-SX-y26">
@@ -641,7 +541,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vSS-IT-tw0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="398" y="609"/>
+            <point key="canvasLocation" x="758" y="611"/>
         </scene>
     </scenes>
     <resources>
