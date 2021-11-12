@@ -32,6 +32,7 @@ public class AudioSpectrogram: CALayer {
     
     // MARK: Properties
     /// Samples per frame — the height of the spectrogram.
+<<<<<<< Updated upstream
     static let sampleCount = 1024
     
     /// Number of displayed buffers — the width of the spectrogram.
@@ -39,6 +40,15 @@ public class AudioSpectrogram: CALayer {
     
     /// Determines the overlap between frames.
     static let hopCount = 512
+=======
+    var sampleCount = 1024
+    
+    /// Number of displayed buffers — the width of the spectrogram.
+    var bufferCount = 768
+    
+    /// Determines the overlap between frames.
+    var hopCount = 512
+>>>>>>> Stashed changes
 
     let captureSession = AVCaptureSession()
     let audioOutput = AVCaptureAudioDataOutput()
@@ -50,6 +60,7 @@ public class AudioSpectrogram: CALayer {
                                      attributes: [],
                                      autoreleaseFrequency: .workItem)
     
+<<<<<<< Updated upstream
     let forwardDCT = vDSP.DCT(count: sampleCount,
                               transformType: .II)!
     
@@ -58,6 +69,16 @@ public class AudioSpectrogram: CALayer {
                                     usingSequence: .hanningDenormalized,
                                     count: sampleCount,
                                     isHalfWindow: false)
+=======
+    lazy var forwardDCT = vDSP.DCT(count: sampleCount,
+                                   transformType: .II)!
+    
+    /// The window sequence used to reduce spectral leakage.
+    lazy var hanningWindow = vDSP.window(ofType: Float.self,
+                                         usingSequence: .hanningDenormalized,
+                                         count: sampleCount,
+                                         isHalfWindow: false)
+>>>>>>> Stashed changes
     
     let dispatchSemaphore = DispatchSemaphore(value: 1)
     
@@ -71,8 +92,13 @@ public class AudioSpectrogram: CALayer {
     var rawAudioData = [Int16]()
     
     /// Raw frequency domain values.
+<<<<<<< Updated upstream
     var frequencyDomainValues = [Float](repeating: 0,
                                         count: bufferCount * sampleCount)
+=======
+    lazy var frequencyDomainValues = [Float](repeating: 0,
+                                             count: bufferCount * sampleCount)
+>>>>>>> Stashed changes
         
     var rgbImageFormat: vImage_CGImageFormat = {
         guard let format = vImage_CGImageFormat(
@@ -89,8 +115,13 @@ public class AudioSpectrogram: CALayer {
     
     /// RGB vImage buffer that contains a vertical representation of the audio spectrogram.
     lazy var rgbImageBuffer: vImage_Buffer = {
+<<<<<<< Updated upstream
         guard let buffer = try? vImage_Buffer(width: AudioSpectrogram.sampleCount,
                                               height: AudioSpectrogram.bufferCount,
+=======
+        guard let buffer = try? vImage_Buffer(width: sampleCount,
+                                              height: bufferCount,
+>>>>>>> Stashed changes
                                               bitsPerPixel: rgbImageFormat.bitsPerPixel) else {
             fatalError("Unable to initialize image buffer.")
         }
@@ -99,8 +130,13 @@ public class AudioSpectrogram: CALayer {
     
     /// RGB vImage buffer that contains a horizontal representation of the audio spectrogram.
     lazy var rotatedImageBuffer: vImage_Buffer = {
+<<<<<<< Updated upstream
         guard let buffer = try? vImage_Buffer(width: AudioSpectrogram.bufferCount,
                                               height: AudioSpectrogram.sampleCount,
+=======
+        guard let buffer = try? vImage_Buffer(width: bufferCount,
+                                              height: sampleCount,
+>>>>>>> Stashed changes
                                               bitsPerPixel: rgbImageFormat.bitsPerPixel)  else {
             fatalError("Unable to initialize rotated image buffer.")
         }
@@ -127,6 +163,7 @@ public class AudioSpectrogram: CALayer {
     
     /// A reusable array that contains the current frame of time domain audio data as single-precision
     /// values.
+<<<<<<< Updated upstream
     var timeDomainBuffer = [Float](repeating: 0,
                                    count: sampleCount)
     
@@ -134,6 +171,15 @@ public class AudioSpectrogram: CALayer {
     /// audio data.
     var frequencyDomainBuffer = [Float](repeating: 0,
                                         count: sampleCount)
+=======
+    lazy var timeDomainBuffer = [Float](repeating: 0,
+                                        count: sampleCount)
+    
+    /// A resuable array that contains the frequency domain representation of the current frame of
+    /// audio data.
+    lazy var frequencyDomainBuffer = [Float](repeating: 0,
+                                             count: sampleCount)
+>>>>>>> Stashed changes
     
     // MARK: Instance Methods
         
@@ -160,10 +206,17 @@ public class AudioSpectrogram: CALayer {
         
         vDSP.convert(amplitude: frequencyDomainBuffer,
                      toDecibels: &frequencyDomainBuffer,
+<<<<<<< Updated upstream
                      zeroReference: Float(AudioSpectrogram.sampleCount))
         
         if frequencyDomainValues.count > AudioSpectrogram.sampleCount {
             frequencyDomainValues.removeFirst(AudioSpectrogram.sampleCount)
+=======
+                     zeroReference: Float(sampleCount))
+        
+        if frequencyDomainValues.count > sampleCount {
+            frequencyDomainValues.removeFirst(sampleCount)
+>>>>>>> Stashed changes
         }
         
         frequencyDomainValues.append(contentsOf: frequencyDomainBuffer)
@@ -173,11 +226,19 @@ public class AudioSpectrogram: CALayer {
     
     /// The value for the maximum float for RGB channels when the app converts PlanarF to
     /// ARGB8888.
+<<<<<<< Updated upstream
     var maxFloat: Float = {
         var maxValue = [Float(Int16.max)]
         vDSP.convert(amplitude: maxValue,
                      toDecibels: &maxValue,
                      zeroReference: Float(AudioSpectrogram.sampleCount))
+=======
+    lazy var maxFloat: Float = {
+        var maxValue = [Float(Int16.max)]
+        vDSP.convert(amplitude: maxValue,
+                     toDecibels: &maxValue,
+                     zeroReference: Float(sampleCount))
+>>>>>>> Stashed changes
         return maxValue[0] * 2
     }()
 
@@ -189,9 +250,15 @@ public class AudioSpectrogram: CALayer {
         
         frequencyDomainValues.withUnsafeMutableBufferPointer {
             var planarImageBuffer = vImage_Buffer(data: $0.baseAddress!,
+<<<<<<< Updated upstream
                                                   height: vImagePixelCount(AudioSpectrogram.bufferCount),
                                                   width: vImagePixelCount(AudioSpectrogram.sampleCount),
                                                   rowBytes: AudioSpectrogram.sampleCount * MemoryLayout<Float>.stride)
+=======
+                                                  height: vImagePixelCount(bufferCount),
+                                                  width: vImagePixelCount(sampleCount),
+                                                  rowBytes: sampleCount * MemoryLayout<Float>.stride)
+>>>>>>> Stashed changes
             
             vImageConvert_PlanarFToARGB8888(&planarImageBuffer,
                                             &planarImageBuffer, &planarImageBuffer, &planarImageBuffer,

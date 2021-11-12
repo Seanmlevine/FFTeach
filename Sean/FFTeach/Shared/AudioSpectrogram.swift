@@ -268,3 +268,7 @@ extension AudioSpectrogram {
                 Pixel_8(blue * 255))
     }
 }
+<<<<<<< Updated upstream
+
+=======
+>>>>>>> Stashed changes
