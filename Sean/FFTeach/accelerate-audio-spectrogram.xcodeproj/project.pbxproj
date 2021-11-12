@@ -15,7 +15,6 @@
 		2410FF3C2731AD1900128083 /* SpectralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2410FF332731AD1800128083 /* SpectralViewController.swift */; };
 		2443F05827333C970098DF79 /* VideoContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2443F05727333C970098DF79 /* VideoContainer.swift */; };
 		2443F05C27333FDC0098DF79 /* MultiVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2443F05B27333FDC0098DF79 /* MultiVideoViewController.swift */; };
-		24F7CDE2271F3EB7000A32CA /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F7CDE1271F3EB7000A32CA /* SecondViewController.swift */; };
 		3E30736C2372FF33000F74C3 /* AudioSpectrogram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3073672372FF33000F74C3 /* AudioSpectrogram.swift */; };
 		3E5E85B424BF502D003E22F5 /* AudioSpectrogram+AVCaptureAudioDataOutputSampleBufferDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFEABBD23730E0E00C9AC41 /* AudioSpectrogram+AVCaptureAudioDataOutputSampleBufferDelegate.swift */; };
 		3E5E85B524BF5031003E22F5 /* AudioSpectrogram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3073672372FF33000F74C3 /* AudioSpectrogram.swift */; };
@@ -43,9 +42,8 @@
 		2410FF312731AD1800128083 /* TempiFFT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TempiFFT.swift; sourceTree = "<group>"; };
 		2410FF322731AD1800128083 /* TempiUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TempiUtilities.swift; sourceTree = "<group>"; };
 		2410FF332731AD1800128083 /* SpectralViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpectralViewController.swift; sourceTree = "<group>"; };
-		2443F05727333C970098DF79 /* VideoContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VideoContainer.swift; path = ../../../../../VideoContainer.swift; sourceTree = "<group>"; };
+		2443F05727333C970098DF79 /* VideoContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoContainer.swift; sourceTree = "<group>"; };
 		2443F05B27333FDC0098DF79 /* MultiVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiVideoViewController.swift; sourceTree = "<group>"; };
-		24F7CDE1271F3EB7000A32CA /* SecondViewController.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		3E3073672372FF33000F74C3 /* AudioSpectrogram.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioSpectrogram.swift; sourceTree = "<group>"; };
 		3E5E85A424BF5023003E22F5 /* accelerate-audio-spectrogram-macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "accelerate-audio-spectrogram-macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EDCF0CB2372EFE600637FFF /* accelerate-audio-spectrogram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "accelerate-audio-spectrogram.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -139,7 +137,6 @@
 				3EDCF0D22372EFE600637FFF /* MainViewController.swift */,
 				2443F05B27333FDC0098DF79 /* MultiVideoViewController.swift */,
 				2443F05727333C970098DF79 /* VideoContainer.swift */,
-				24F7CDE1271F3EB7000A32CA /* SecondViewController.swift */,
 				3EDCF0CE2372EFE600637FFF /* AppDelegate.swift */,
 				3EDCF0D02372EFE600637FFF /* SceneDelegate.swift */,
 				3EDCF0D42372EFE600637FFF /* Main.storyboard */,
@@ -298,7 +295,6 @@
 			files = (
 				2410FF3C2731AD1900128083 /* SpectralViewController.swift in Sources */,
 				2410FF392731AD1900128083 /* TempiAudioInput.swift in Sources */,
-				24F7CDE2271F3EB7000A32CA /* SecondViewController.swift in Sources */,
 				2410FF352731AD1900128083 /* TempiDebug.swift in Sources */,
 				2443F05C27333FDC0098DF79 /* MultiVideoViewController.swift in Sources */,
 				2410FF3A2731AD1900128083 /* TempiFFT.swift in Sources */,

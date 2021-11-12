@@ -17,26 +17,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="756"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="KMi-8K-jzo">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="KMi-8K-jzo">
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="757"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g0C-dD-gdn">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g0C-dD-gdn">
                                         <rect key="frame" x="0.0" y="0.0" width="390" height="350"/>
                                         <subviews>
-                                            <containerView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CYQ-SW-GA1">
-                                                <rect key="frame" x="20" y="25" width="350" height="305"/>
+                                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CYQ-SW-GA1">
+                                                <rect key="frame" x="20" y="20" width="350" height="310"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="310" id="iuq-GM-Taq"/>
                                                 </constraints>
                                             </containerView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SPECTROGRAM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iRp-dz-Tkt">
-                                                <rect key="frame" x="133" y="8" width="124" height="17"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="OOu-Mu-4rw">
-                                                <rect key="frame" x="20" y="311" width="350" height="32"/>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="OOu-Mu-4rw">
+                                                <rect key="frame" x="20" y="310" width="350" height="32"/>
                                                 <segments>
                                                     <segment title="512"/>
                                                     <segment title="1024"/>
@@ -47,9 +41,16 @@
                                                     <action selector="segmentedControlChanged:" destination="aqW-gh-XXX" eventType="valueChanged" id="NmK-CO-bZt"/>
                                                 </connections>
                                             </segmentedControl>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SPECTROGRAM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iRp-dz-Tkt">
+                                                <rect key="frame" x="133" y="0.0" width="124" height="25"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBrownColor"/>
                                         <constraints>
+                                            <constraint firstItem="iRp-dz-Tkt" firstAttribute="top" secondItem="g0C-dD-gdn" secondAttribute="top" id="0rj-EH-pHm"/>
+                                            <constraint firstItem="iRp-dz-Tkt" firstAttribute="centerX" secondItem="CYQ-SW-GA1" secondAttribute="centerX" id="0uJ-iR-RM3"/>
                                             <constraint firstAttribute="bottom" secondItem="OOu-Mu-4rw" secondAttribute="bottom" constant="9" id="2l2-QM-jck"/>
                                             <constraint firstAttribute="trailing" secondItem="OOu-Mu-4rw" secondAttribute="trailing" constant="20" symbolic="YES" id="5Ny-up-glL"/>
                                             <constraint firstAttribute="bottom" secondItem="CYQ-SW-GA1" secondAttribute="bottom" constant="20" id="KLp-1I-68k"/>
@@ -57,11 +58,18 @@
                                             <constraint firstAttribute="trailing" secondItem="CYQ-SW-GA1" secondAttribute="trailing" constant="20" id="qSg-lY-iu2"/>
                                             <constraint firstItem="CYQ-SW-GA1" firstAttribute="leading" secondItem="g0C-dD-gdn" secondAttribute="leading" constant="20" id="tAN-s6-HI0"/>
                                             <constraint firstItem="CYQ-SW-GA1" firstAttribute="top" secondItem="g0C-dD-gdn" secondAttribute="top" constant="20" id="y71-bd-17k"/>
+                                            <constraint firstItem="CYQ-SW-GA1" firstAttribute="top" secondItem="iRp-dz-Tkt" secondAttribute="bottom" constant="-5" id="yRV-RS-hh0"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8aE-O3-8Dq">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8aE-O3-8Dq">
                                         <rect key="frame" x="0.0" y="350" width="390" height="407"/>
                                         <subviews>
+                                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OyO-S3-W9C">
+                                                <rect key="frame" x="75" y="28" width="240" height="128"/>
+                                                <connections>
+                                                    <segue destination="8x5-ZD-Evo" kind="embed" id="3Od-0v-dqs"/>
+                                                </connections>
+                                            </containerView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LINE1 LINE1 LINE1 LINE1 LINE1 LINE1 LINE1 TEST TEST TEST TEST TEST TEST TEST LINE2 LINE2 LINE2 LINE2 LINE2 LINE2 LINE2" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c3h-Ge-Ksg">
                                                 <rect key="frame" x="18" y="28" width="354" height="350"/>
                                                 <constraints>
@@ -71,18 +79,21 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OyO-S3-W9C">
-                                                <rect key="frame" x="75" y="28" width="240" height="128"/>
-                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                                <connections>
-                                                    <segue destination="8x5-ZD-Evo" kind="embed" id="3Od-0v-dqs"/>
-                                                </connections>
-                                            </containerView>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gt3-f5-dXx">
+                                                <rect key="frame" x="122" y="270" width="113" height="31"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="tinted" title="Spectral View"/>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="OyO-S3-W9C" secondAttribute="bottom" constant="251" id="Bfz-Ja-9oj"/>
                                             <constraint firstItem="c3h-Ge-Ksg" firstAttribute="centerX" secondItem="8aE-O3-8Dq" secondAttribute="centerX" id="F11-Qy-qOH"/>
+                                            <constraint firstItem="OyO-S3-W9C" firstAttribute="centerX" secondItem="c3h-Ge-Ksg" secondAttribute="centerX" id="GJ0-Ia-sS6"/>
+                                            <constraint firstItem="OyO-S3-W9C" firstAttribute="leading" secondItem="8aE-O3-8Dq" secondAttribute="leading" constant="75" id="K1B-nd-AHh"/>
                                             <constraint firstAttribute="height" constant="407" id="Xe8-fU-P6g"/>
+                                            <constraint firstItem="OyO-S3-W9C" firstAttribute="top" secondItem="c3h-Ge-Ksg" secondAttribute="top" id="eBe-kO-5rn"/>
                                             <constraint firstItem="c3h-Ge-Ksg" firstAttribute="top" secondItem="8aE-O3-8Dq" secondAttribute="top" constant="28" id="grO-jG-zqI"/>
                                             <constraint firstAttribute="trailing" secondItem="c3h-Ge-Ksg" secondAttribute="trailing" constant="18" id="qcc-VS-9Lt"/>
                                             <constraint firstItem="c3h-Ge-Ksg" firstAttribute="leading" secondItem="8aE-O3-8Dq" secondAttribute="leading" constant="18" id="wWn-xo-g1s"/>
@@ -94,6 +105,11 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="CU7-bN-7we"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="KMi-8K-jzo" firstAttribute="leading" secondItem="sy1-P4-qEV" secondAttribute="leading" id="JDF-ue-amA"/>
+                            <constraint firstItem="KMi-8K-jzo" firstAttribute="top" secondItem="CU7-bN-7we" secondAttribute="top" id="XgW-2j-KtQ"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="KMi-8K-jzo" secondAttribute="bottom" constant="-84" id="lpA-sD-kEG"/>
+                        </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="FFTeach" id="y6s-xv-bHW">
@@ -138,7 +154,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="756"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ay9-8d-3id">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ay9-8d-3id">
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="673"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="FCW-Q7-DuC">
@@ -147,11 +163,11 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PNH-xU-2eV">
                                                 <rect key="frame" x="0.0" y="0.0" width="390" height="350"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zby-nt-F8Y">
-                                                        <rect key="frame" x="18.377361993638488" y="40" width="349.99999999999977" height="290"/>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zby-nt-F8Y">
+                                                        <rect key="frame" x="8" y="40" width="350" height="302"/>
                                                         <subviews>
-                                                            <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="te1-nX-IP2" customClass="VideoContainer" customModule="accelerate_audio_spectrogram" customModuleProvider="target">
-                                                                <rect key="frame" x="8" y="8" width="334" height="274"/>
+                                                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="te1-nX-IP2" customClass="VideoContainer" customModule="accelerate_audio_spectrogram" customModuleProvider="target">
+                                                                <rect key="frame" x="16" y="8" width="334" height="274"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="274" id="Y54-Ie-4Tg"/>
                                                                     <constraint firstAttribute="width" constant="334" id="r1d-ZK-xwn"/>
@@ -165,8 +181,8 @@
                                                             <constraint firstItem="te1-nX-IP2" firstAttribute="trailing" secondItem="zby-nt-F8Y" secondAttribute="trailingMargin" constant="8" id="oke-RE-AJ7"/>
                                                         </constraints>
                                                     </view>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Spectrogram Example #1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OFe-0Q-hdA">
-                                                        <rect key="frame" x="111" y="15" width="172" height="17"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spectrogram Example #1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OFe-0Q-hdA">
+                                                        <rect key="frame" x="86.666666666666671" y="15" width="192.66666666666663" height="17"/>
                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -206,8 +222,8 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FpG-wW-WBl">
                                                 <rect key="frame" x="0.0" y="757" width="390" height="350"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R5V-l8-g7n">
-                                                        <rect key="frame" x="20" y="40" width="349.99999999999966" height="289.99999999999983"/>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R5V-l8-g7n">
+                                                        <rect key="frame" x="8" y="40" width="372.66666666666669" height="302"/>
                                                         <subviews>
                                                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="89W-ah-oEi" customClass="VideoContainer" customModule="accelerate_audio_spectrogram" customModuleProvider="target">
                                                                 <rect key="frame" x="8" y="8" width="334" height="274"/>
@@ -223,8 +239,8 @@
                                                             <constraint firstItem="89W-ah-oEi" firstAttribute="leading" secondItem="R5V-l8-g7n" secondAttribute="leadingMargin" id="pND-3b-6Et"/>
                                                         </constraints>
                                                     </view>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Spectrogram Example #2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZfY-H7-zEI">
-                                                        <rect key="frame" x="111" y="15" width="170" height="17"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spectrogram Example #2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZfY-H7-zEI">
+                                                        <rect key="frame" x="109.33333333333331" y="15" width="170" height="17"/>
                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -264,8 +280,8 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bsg-jE-tNO">
                                                 <rect key="frame" x="0.0" y="1514" width="390" height="350"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aqx-NC-5Qh">
-                                                        <rect key="frame" x="18.79826057085711" y="40" width="350.00000000000023" height="289.99999999999989"/>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aqx-NC-5Qh">
+                                                        <rect key="frame" x="8" y="40" width="349" height="302"/>
                                                         <subviews>
                                                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zb0-6P-68K" customClass="VideoContainer" customModule="accelerate_audio_spectrogram" customModuleProvider="target">
                                                                 <rect key="frame" x="8" y="8" width="333" height="274"/>
@@ -282,8 +298,8 @@
                                                             <constraint firstItem="Zb0-6P-68K" firstAttribute="leading" secondItem="aqx-NC-5Qh" secondAttribute="leadingMargin" id="uaM-Bv-64e"/>
                                                         </constraints>
                                                     </view>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Spectrogram Example #3" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9w3-SU-knT">
-                                                        <rect key="frame" x="111" y="15" width="174" height="17"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spectrogram Example #3" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9w3-SU-knT">
+                                                        <rect key="frame" x="88.333333333333329" y="15" width="196.66666666666669" height="17"/>
                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -296,9 +312,9 @@
                                                     <constraint firstItem="aqx-NC-5Qh" firstAttribute="top" secondItem="Bsg-jE-tNO" secondAttribute="top" constant="40" id="D07-zC-OTd"/>
                                                     <constraint firstItem="aqx-NC-5Qh" firstAttribute="leading" secondItem="Bsg-jE-tNO" secondAttribute="leadingMargin" id="MMV-Dj-8nQ"/>
                                                     <constraint firstItem="aqx-NC-5Qh" firstAttribute="top" secondItem="9w3-SU-knT" secondAttribute="bottom" constant="8" id="MeJ-vf-xlN"/>
-                                                    <constraint firstAttribute="trailing" secondItem="9w3-SU-knT" secondAttribute="trailing" constant="110.66666666666663" id="QVO-IA-54n"/>
+                                                    <constraint firstAttribute="trailing" secondItem="9w3-SU-knT" secondAttribute="trailing" constant="105" id="QVO-IA-54n"/>
                                                     <constraint firstItem="9w3-SU-knT" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Bsg-jE-tNO" secondAttribute="leading" constant="20" symbolic="YES" id="Uap-MY-mDy"/>
-                                                    <constraint firstItem="9w3-SU-knT" firstAttribute="centerX" secondItem="aqx-NC-5Qh" secondAttribute="centerX" id="adc-Rk-DPZ"/>
+                                                    <constraint firstItem="9w3-SU-knT" firstAttribute="centerX" secondItem="aqx-NC-5Qh" secondAttribute="centerX" constant="4.2017394291427763" id="adc-Rk-DPZ"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iJ6-Mf-TNF">
@@ -323,10 +339,10 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ceg-sf-KLn">
                                                 <rect key="frame" x="0.0" y="2271" width="390" height="350"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vfg-ZW-hTq">
-                                                        <rect key="frame" x="18.79826057085711" y="40" width="349.99999999999932" height="290"/>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vfg-ZW-hTq">
+                                                        <rect key="frame" x="8" y="40" width="348" height="302"/>
                                                         <subviews>
-                                                            <containerView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5yO-Bq-vV1" customClass="VideoContainer" customModule="accelerate_audio_spectrogram" customModuleProvider="target">
+                                                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5yO-Bq-vV1" customClass="VideoContainer" customModule="accelerate_audio_spectrogram" customModuleProvider="target">
                                                                 <rect key="frame" x="7" y="8" width="334" height="274"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="274" id="c6U-Cd-AD7"/>
@@ -335,9 +351,14 @@
                                                             </containerView>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                                        <constraints>
+                                                            <constraint firstItem="5yO-Bq-vV1" firstAttribute="leading" secondItem="vfg-ZW-hTq" secondAttribute="leading" constant="7" id="6lZ-Go-dgE"/>
+                                                            <constraint firstItem="5yO-Bq-vV1" firstAttribute="centerX" secondItem="vfg-ZW-hTq" secondAttribute="centerX" id="EDr-C3-AFB"/>
+                                                            <constraint firstItem="5yO-Bq-vV1" firstAttribute="top" secondItem="vfg-ZW-hTq" secondAttribute="topMargin" id="oaJ-1N-sqH"/>
+                                                        </constraints>
                                                     </view>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Spectrogram Example #4" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TGM-tv-bJe">
-                                                        <rect key="frame" x="111" y="15" width="172" height="17"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spectrogram Example #4" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TGM-tv-bJe">
+                                                        <rect key="frame" x="84.666666666666671" y="15" width="194.66666666666663" height="17"/>
                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -377,10 +398,10 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FDi-6a-jTo">
                                                 <rect key="frame" x="0.0" y="3028" width="390" height="350"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qIg-G8-n45">
-                                                        <rect key="frame" x="17.603094945370231" y="40" width="350.00000000000011" height="290.00000000000011"/>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qIg-G8-n45">
+                                                        <rect key="frame" x="8" y="40" width="350" height="302"/>
                                                         <subviews>
-                                                            <containerView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vc2-w7-LSB" customClass="VideoContainer" customModule="accelerate_audio_spectrogram" customModuleProvider="target">
+                                                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vc2-w7-LSB" customClass="VideoContainer" customModule="accelerate_audio_spectrogram" customModuleProvider="target">
                                                                 <rect key="frame" x="5" y="8" width="334" height="274"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="334" id="GOR-aY-nn2"/>
@@ -389,9 +410,14 @@
                                                             </containerView>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                                        <constraints>
+                                                            <constraint firstItem="Vc2-w7-LSB" firstAttribute="top" secondItem="qIg-G8-n45" secondAttribute="topMargin" id="80N-2Y-EPP"/>
+                                                            <constraint firstAttribute="trailing" secondItem="Vc2-w7-LSB" secondAttribute="trailing" constant="11.000000000000114" id="hC9-Au-cMc"/>
+                                                            <constraint firstItem="Vc2-w7-LSB" firstAttribute="leading" secondItem="qIg-G8-n45" secondAttribute="leading" constant="5" id="ynw-bP-dWw"/>
+                                                        </constraints>
                                                     </view>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Spectrogram Example #5" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qVo-vt-9iV">
-                                                        <rect key="frame" x="111" y="15" width="172" height="17"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spectrogram Example #5" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qVo-vt-9iV">
+                                                        <rect key="frame" x="86.666666666666671" y="15" width="192.66666666666663" height="17"/>
                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -431,10 +457,10 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rNq-Pn-DBZ">
                                                 <rect key="frame" x="0.0" y="3785" width="390" height="350"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HVb-am-hPu">
-                                                        <rect key="frame" x="18.943217246151107" y="40" width="349.99999999999989" height="290"/>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HVb-am-hPu">
+                                                        <rect key="frame" x="8" y="40" width="348" height="302"/>
                                                         <subviews>
-                                                            <containerView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x3b-ie-DpV" customClass="VideoContainer" customModule="accelerate_audio_spectrogram" customModuleProvider="target">
+                                                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x3b-ie-DpV" customClass="VideoContainer" customModule="accelerate_audio_spectrogram" customModuleProvider="target">
                                                                 <rect key="frame" x="7" y="8" width="334" height="274"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="334" id="R7W-k2-Juw"/>
@@ -443,9 +469,14 @@
                                                             </containerView>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                                        <constraints>
+                                                            <constraint firstItem="x3b-ie-DpV" firstAttribute="top" secondItem="HVb-am-hPu" secondAttribute="topMargin" id="0NZ-72-h3m"/>
+                                                            <constraint firstItem="x3b-ie-DpV" firstAttribute="centerX" secondItem="HVb-am-hPu" secondAttribute="centerX" id="U36-HP-myL"/>
+                                                            <constraint firstItem="x3b-ie-DpV" firstAttribute="leading" secondItem="HVb-am-hPu" secondAttribute="leading" constant="7" id="ezg-9K-Ein"/>
+                                                        </constraints>
                                                     </view>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Spectrogram Example #6" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TbW-No-J2W">
-                                                        <rect key="frame" x="111" y="15" width="172" height="17"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spectrogram Example #6" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TbW-No-J2W">
+                                                        <rect key="frame" x="84.666666666666671" y="15" width="194.66666666666663" height="17"/>
                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -486,28 +517,32 @@
                                     </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="FCW-Q7-DuC" secondAttribute="bottom" id="7wM-jZ-r8f"/>
+                                    <constraint firstAttribute="bottom" secondItem="FCW-Q7-DuC" secondAttribute="bottom" constant="-435" id="7wM-jZ-r8f"/>
+                                    <constraint firstAttribute="trailing" secondItem="FCW-Q7-DuC" secondAttribute="trailing" id="SW5-QL-q6C"/>
                                     <constraint firstItem="FCW-Q7-DuC" firstAttribute="top" secondItem="fAe-Iz-ZRx" secondAttribute="top" id="hqg-bl-3Xu"/>
                                     <constraint firstItem="FCW-Q7-DuC" firstAttribute="leading" secondItem="Ay9-8d-3id" secondAttribute="leading" id="iVE-mk-3Tu"/>
-                                    <constraint firstAttribute="height" constant="756" id="mMN-wT-kQw"/>
+                                    <constraint firstAttribute="height" constant="673" id="mMN-wT-kQw"/>
                                     <constraint firstItem="FCW-Q7-DuC" firstAttribute="centerX" secondItem="Ay9-8d-3id" secondAttribute="centerX" id="yHR-3i-xgn"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="fAe-Iz-ZRx"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="l4A-SA-Uc9"/>
                             </scrollView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x5X-qk-yIa">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x5X-qk-yIa">
                                 <rect key="frame" x="0.0" y="672" width="390" height="84"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="aXa-Jr-jLW"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Ay9-8d-3id" firstAttribute="trailing" secondItem="x5X-qk-yIa" secondAttribute="trailing" id="S9Y-Hh-ud8"/>
+                            <constraint firstItem="x5X-qk-yIa" firstAttribute="top" secondItem="aXa-Jr-jLW" secondAttribute="top" constant="672" id="SPH-Qb-CF9"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="x5X-qk-yIa" secondAttribute="bottom" constant="-83" id="UXK-UC-yNa"/>
                             <constraint firstItem="Ay9-8d-3id" firstAttribute="top" secondItem="aXa-Jr-jLW" secondAttribute="top" id="dwh-qo-IWU"/>
+                            <constraint firstItem="Ay9-8d-3id" firstAttribute="leading" secondItem="x5X-qk-yIa" secondAttribute="leading" id="jHt-1q-6l1"/>
                             <constraint firstItem="Ay9-8d-3id" firstAttribute="centerX" secondItem="nt6-VV-XHR" secondAttribute="centerX" id="mxg-Jo-gzX"/>
                             <constraint firstItem="Ay9-8d-3id" firstAttribute="leading" secondItem="aXa-Jr-jLW" secondAttribute="leading" id="sYk-9x-Sz2"/>
-                            <constraint firstAttribute="bottom" secondItem="Ay9-8d-3id" secondAttribute="bottom" id="ydZ-ew-Nhw"/>
+                            <constraint firstAttribute="bottom" secondItem="Ay9-8d-3id" secondAttribute="bottom" constant="83" id="ydZ-ew-Nhw"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="OKX-fc-8UI"/>
