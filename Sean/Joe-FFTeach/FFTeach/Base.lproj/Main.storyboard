@@ -20,19 +20,17 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="isf-Fe-it1">
                                 <rect key="frame" x="10" y="88" width="394" height="394"/>
                                 <subviews>
-                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nI5-hu-qCG">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ktF-Jj-QZS">
                                         <rect key="frame" x="8" y="8" width="378" height="378"/>
-                                        <connections>
-                                            <segue destination="uRa-B5-e7a" kind="embed" id="vm1-SU-ccB"/>
-                                        </connections>
-                                    </containerView>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemGrayColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="nI5-hu-qCG" secondAttribute="trailing" constant="8" id="DJo-oT-zUF"/>
-                                    <constraint firstItem="nI5-hu-qCG" firstAttribute="top" secondItem="isf-Fe-it1" secondAttribute="top" constant="8" id="aCY-h1-rOt"/>
-                                    <constraint firstAttribute="bottom" secondItem="nI5-hu-qCG" secondAttribute="bottom" constant="8" id="g0z-9D-1dI"/>
-                                    <constraint firstItem="nI5-hu-qCG" firstAttribute="leading" secondItem="isf-Fe-it1" secondAttribute="leading" constant="8" id="i1q-4K-K48"/>
+                                    <constraint firstItem="ktF-Jj-QZS" firstAttribute="leading" secondItem="isf-Fe-it1" secondAttribute="leading" constant="8" id="3O7-ha-FCz"/>
+                                    <constraint firstItem="ktF-Jj-QZS" firstAttribute="top" secondItem="isf-Fe-it1" secondAttribute="top" constant="8" id="EUI-kC-TWY"/>
+                                    <constraint firstAttribute="bottom" secondItem="ktF-Jj-QZS" secondAttribute="bottom" constant="8" id="RS6-R0-YJQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="ktF-Jj-QZS" secondAttribute="trailing" constant="8" id="sf2-nu-xby"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sPE-xP-p4D">
@@ -41,18 +39,34 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="vFn-Lw-twg">
+                                <rect key="frame" x="10" y="490" width="394" height="32"/>
+                                <segments>
+                                    <segment title="512"/>
+                                    <segment title="1024"/>
+                                    <segment title="2048"/>
+                                    <segment title="4096"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentedControlChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="GJn-GP-dVS"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemFillColor"/>
                         <constraints>
                             <constraint firstItem="sPE-xP-p4D" firstAttribute="top" secondItem="isf-Fe-it1" secondAttribute="bottom" constant="20" id="0H0-RR-3J0"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sPE-xP-p4D" secondAttribute="trailing" constant="20" id="5gN-0I-paB"/>
+                            <constraint firstItem="vFn-Lw-twg" firstAttribute="top" secondItem="isf-Fe-it1" secondAttribute="bottom" constant="8" id="69K-MH-LSN"/>
+                            <constraint firstItem="vFn-Lw-twg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="P3a-yE-Ah2"/>
                             <constraint firstItem="sPE-xP-p4D" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ZBe-4p-nXe"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="isf-Fe-it1" secondAttribute="trailing" constant="10" id="bdZ-QN-iPQ"/>
                             <constraint firstItem="isf-Fe-it1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="f5O-cD-Dh7"/>
                             <constraint firstItem="isf-Fe-it1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="fh6-Lb-Llh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="vFn-Lw-twg" secondAttribute="bottom" constant="341" id="l7T-Lw-ovh"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="isf-Fe-it1" secondAttribute="bottom" constant="380" id="mGd-9R-QA3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="sPE-xP-p4D" secondAttribute="bottom" constant="20" id="yAe-Fe-IhD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vFn-Lw-twg" secondAttribute="trailing" constant="10" id="yjX-uh-Dd4"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Spectrogram" largeTitleDisplayMode="always" id="009-7s-OEo">
@@ -63,12 +77,13 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="spectrogramContainer" destination="ktF-Jj-QZS" id="R37-Dy-yJD"/>
                         <outlet property="spectrogramText" destination="sPE-xP-p4D" id="YsQ-Kj-Z84"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2829" y="-1526"/>
+            <point key="canvasLocation" x="2828.985507246377" y="-1526.1160714285713"/>
         </scene>
         <!--Examples-->
         <scene sceneID="0oW-5e-VaY">
@@ -172,21 +187,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dq1-1Y-aX0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1792.753623188406" y="-915.40178571428567"/>
-        </scene>
-        <!--Spectrogram View Controller-->
-        <scene sceneID="IyX-zP-XqM">
-            <objects>
-                <viewController id="uRa-B5-e7a" customClass="SpectrogramViewController" customModule="FFTeach" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ELv-wF-aS6">
-                        <rect key="frame" x="0.0" y="0.0" width="378" height="378"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="nC2-sD-msS"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2HD-r4-2pO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2829" y="-971"/>
         </scene>
         <!--FFT-->
         <scene sceneID="Etk-bl-te6">

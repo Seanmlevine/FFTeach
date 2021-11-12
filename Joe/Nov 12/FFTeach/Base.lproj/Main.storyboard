@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19528" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="F02-68-IIm">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="F02-68-IIm">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="UIMenu" message="Requires Xcode 11 or later." minToolsVersion="11.0" requiredIntegratedClassName="UICommandDiff"/>
@@ -20,19 +20,17 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="isf-Fe-it1">
                                 <rect key="frame" x="10" y="88" width="394" height="394"/>
                                 <subviews>
-                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nI5-hu-qCG">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G9F-CD-RDa">
                                         <rect key="frame" x="8" y="8" width="378" height="378"/>
-                                        <connections>
-                                            <segue destination="uRa-B5-e7a" kind="embed" id="vm1-SU-ccB"/>
-                                        </connections>
-                                    </containerView>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemGrayColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="nI5-hu-qCG" secondAttribute="trailing" constant="8" id="DJo-oT-zUF"/>
-                                    <constraint firstItem="nI5-hu-qCG" firstAttribute="top" secondItem="isf-Fe-it1" secondAttribute="top" constant="8" id="aCY-h1-rOt"/>
-                                    <constraint firstAttribute="bottom" secondItem="nI5-hu-qCG" secondAttribute="bottom" constant="8" id="g0z-9D-1dI"/>
-                                    <constraint firstItem="nI5-hu-qCG" firstAttribute="leading" secondItem="isf-Fe-it1" secondAttribute="leading" constant="8" id="i1q-4K-K48"/>
+                                    <constraint firstAttribute="bottom" secondItem="G9F-CD-RDa" secondAttribute="bottom" constant="8" id="40G-1q-dD7"/>
+                                    <constraint firstAttribute="trailing" secondItem="G9F-CD-RDa" secondAttribute="trailing" constant="8" id="GCD-aD-YJA"/>
+                                    <constraint firstItem="G9F-CD-RDa" firstAttribute="top" secondItem="isf-Fe-it1" secondAttribute="top" constant="8" id="GN0-Yx-xEq"/>
+                                    <constraint firstItem="G9F-CD-RDa" firstAttribute="leading" secondItem="isf-Fe-it1" secondAttribute="leading" constant="8" id="tub-3b-SxG"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sPE-xP-p4D">
@@ -41,16 +39,33 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="HIU-DN-JLB">
+                                <rect key="frame" x="10" y="490" width="394" height="32"/>
+                                <segments>
+                                    <segment title="512"/>
+                                    <segment title="1024"/>
+                                    <segment title="2048"/>
+                                    <segment title="4096"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentedControlChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="8eT-e3-8BX"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemFillColor"/>
                         <constraints>
                             <constraint firstItem="sPE-xP-p4D" firstAttribute="top" secondItem="isf-Fe-it1" secondAttribute="bottom" constant="20" id="0H0-RR-3J0"/>
+                            <constraint firstItem="HIU-DN-JLB" firstAttribute="top" secondItem="isf-Fe-it1" secondAttribute="bottom" constant="8" id="4y5-Zi-FIp"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sPE-xP-p4D" secondAttribute="trailing" constant="20" id="5gN-0I-paB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HIU-DN-JLB" secondAttribute="trailing" constant="10" id="8gj-cz-Yz2"/>
+                            <constraint firstItem="HIU-DN-JLB" firstAttribute="top" secondItem="isf-Fe-it1" secondAttribute="bottom" constant="8" symbolic="YES" id="QQQ-Qm-9Ql"/>
                             <constraint firstItem="sPE-xP-p4D" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ZBe-4p-nXe"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="isf-Fe-it1" secondAttribute="trailing" constant="10" id="bdZ-QN-iPQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="HIU-DN-JLB" secondAttribute="bottom" constant="341" id="dQ1-cR-28J"/>
                             <constraint firstItem="isf-Fe-it1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="f5O-cD-Dh7"/>
                             <constraint firstItem="isf-Fe-it1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="fh6-Lb-Llh"/>
+                            <constraint firstItem="HIU-DN-JLB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="fp2-2Z-aYz"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="isf-Fe-it1" secondAttribute="bottom" constant="380" id="mGd-9R-QA3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="sPE-xP-p4D" secondAttribute="bottom" constant="20" id="yAe-Fe-IhD"/>
                         </constraints>
@@ -63,12 +78,13 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="spectrogramContainer" destination="G9F-CD-RDa" id="Dhr-gJ-Cvt"/>
                         <outlet property="spectrogramText" destination="sPE-xP-p4D" id="YsQ-Kj-Z84"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2829" y="-1526"/>
+            <point key="canvasLocation" x="2828.985507246377" y="-1526.1160714285713"/>
         </scene>
         <!--Examples-->
         <scene sceneID="0oW-5e-VaY">
@@ -190,21 +206,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dq1-1Y-aX0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1792.753623188406" y="-915.40178571428567"/>
-        </scene>
-        <!--Spectrogram View Controller-->
-        <scene sceneID="IyX-zP-XqM">
-            <objects>
-                <viewController id="uRa-B5-e7a" customClass="SpectrogramViewController" customModule="FFTeach" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ELv-wF-aS6">
-                        <rect key="frame" x="0.0" y="0.0" width="378" height="378"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="nC2-sD-msS"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2HD-r4-2pO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2829" y="-971"/>
         </scene>
         <!--Multi Video View Controller-->
         <scene sceneID="hPf-fY-LD8">

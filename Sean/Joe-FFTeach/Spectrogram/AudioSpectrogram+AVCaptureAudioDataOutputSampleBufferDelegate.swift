@@ -42,7 +42,7 @@ extension AudioSpectrogram: AVCaptureAudioDataOutputSampleBufferDelegate {
             nyquistFrequency = 0.5 / (duration / timescale / numsamples)
         }
 
-        if self.rawAudioData.count < AudioSpectrogram.sampleCount * 2 {
+        if self.rawAudioData.count < sampleCount * 2 {
             let actualSampleCount = CMSampleBufferGetNumSamples(sampleBuffer)
             
             let ptr = data.bindMemory(to: Int16.self, capacity: actualSampleCount)
@@ -51,9 +51,9 @@ extension AudioSpectrogram: AVCaptureAudioDataOutputSampleBufferDelegate {
             rawAudioData.append(contentsOf: Array(buf))
         }
 
-        while self.rawAudioData.count >= AudioSpectrogram.sampleCount {
-            let dataToProcess = Array(self.rawAudioData[0 ..< AudioSpectrogram.sampleCount])
-            self.rawAudioData.removeFirst(AudioSpectrogram.hopCount)
+        while self.rawAudioData.count >= sampleCount {
+            let dataToProcess = Array(self.rawAudioData[0 ..< sampleCount])
+            self.rawAudioData.removeFirst(hopCount)
             self.processData(values: dataToProcess)
         }
      
@@ -134,5 +134,10 @@ extension AudioSpectrogram: AVCaptureAudioDataOutputSampleBufferDelegate {
             }
         }
     }
+    
+    func stopRunning() {
+        sessionQueue.async {
+            self.captureSession.stopRunning()
+        }
+    }
 }
-

@@ -12,12 +12,20 @@ import AVKit
 
 class SpecViewController: UIViewController {
     
+    // Creates an audioSpectrogram object. This object will be made visible later by inserting it into a Sublayer. Note that you must add a "Privacy - Microphone Usage Description" entry to 'Info.plist' in order to allow the audioSpectrogram microphone access.
+    var audioSpectrogram = AudioSpectrogram()
+    
+    
     @IBOutlet weak var spectrogramText: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        audioSpectrogram.contentsGravity = .resize
+        view.layer.addSublayer(audioSpectrogram)
+  
+        view.backgroundColor = .black
+        audioSpectrogram.startRunning()
         
         
         // Sets the text to be stored within the "spectrogramText" object
@@ -35,7 +43,9 @@ class SpecViewController: UIViewController {
         spectrogramText.textAlignment = .center
     }
 
+    @IBOutlet weak var spectrogramContainer: UIView!
     override func viewDidLayoutSubviews() {
+        audioSpectrogram.frame = spectrogramContainer.bounds
     }
     
     override var prefersHomeIndicatorAutoHidden: Bool {
@@ -49,5 +59,23 @@ class SpecViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
     }
+    
+    func set(sampleCount: Int) {
+        audioSpectrogram.stopRunning()
+        audioSpectrogram.removeFromSuperlayer()
+        
+        audioSpectrogram = AudioSpectrogram()
+        audioSpectrogram.contentsGravity = .resize
+        audioSpectrogram.sampleCount = sampleCount
+        spectrogramContainer.layer.addSublayer(audioSpectrogram)
+        audioSpectrogram.frame = spectrogramContainer.bounds
+        audioSpectrogram.startRunning()
+    }
+    
+    @IBAction func segmentedControlChanged(_ sender: UISegmentedControl) {
+        let values = [512, 1024, 2048, 4096]
+        set(sampleCount: values[sender.selectedSegmentIndex])
+    }
+    
+    
 }
-

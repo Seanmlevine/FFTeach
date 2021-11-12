@@ -80,11 +80,6 @@ class SecondViewController: UIViewController {
 */
     
     
-    @IBAction func spectrogramSelected(_ sender: Any) {
-        print(exampleButton.titleLabel)
-        print("------------")
-        print(exampleButton.currentTitle)
-    }
     
     
     
