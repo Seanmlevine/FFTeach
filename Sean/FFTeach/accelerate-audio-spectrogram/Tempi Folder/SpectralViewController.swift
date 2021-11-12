@@ -45,7 +45,8 @@ class SpectralViewController: UIViewController {
             self.spectralView.setNeedsDisplay()
         }
     }
-    
+
+
     override func didReceiveMemoryWarning() {
         NSLog("*** Memory!")
         super.didReceiveMemoryWarning()

@@ -29,8 +29,56 @@
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="310" id="iuq-GM-Taq"/>
                                                 </constraints>
                                             </containerView>
-                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="OOu-Mu-4rw">
-                                                <rect key="frame" x="20" y="310" width="350" height="32"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SPECTROGRAM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iRp-dz-Tkt">
+                                                <rect key="frame" x="139.66666666666666" y="0.0" width="111" height="25"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FREQUENCY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" adjustsFontForContentSizeCategory="YES" id="KIE-29-uhq">
+                                                <rect key="frame" x="-53" y="163" width="124" height="25"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="11"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 Hz" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" adjustsFontForContentSizeCategory="YES" id="ufz-n1-LK3">
+                                                <rect key="frame" x="-53" y="305" width="124" height="25"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="11"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20 kHz" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" adjustsFontForContentSizeCategory="YES" id="g3Q-4k-LHq" userLabel="Twenty kHz Label">
+                                                <rect key="frame" x="-53" y="29" width="124" height="25"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="11"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBrownColor"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstItem="iRp-dz-Tkt" firstAttribute="top" secondItem="g0C-dD-gdn" secondAttribute="top" id="0rj-EH-pHm"/>
+                                            <constraint firstItem="iRp-dz-Tkt" firstAttribute="centerX" secondItem="CYQ-SW-GA1" secondAttribute="centerX" id="0uJ-iR-RM3"/>
+                                            <constraint firstAttribute="bottom" secondItem="CYQ-SW-GA1" secondAttribute="bottom" constant="20" id="KLp-1I-68k"/>
+                                            <constraint firstAttribute="trailing" secondItem="CYQ-SW-GA1" secondAttribute="trailing" constant="20" id="qSg-lY-iu2"/>
+                                            <constraint firstItem="CYQ-SW-GA1" firstAttribute="leading" secondItem="g0C-dD-gdn" secondAttribute="leading" constant="20" id="tAN-s6-HI0"/>
+                                            <constraint firstItem="CYQ-SW-GA1" firstAttribute="top" secondItem="g0C-dD-gdn" secondAttribute="top" constant="20" id="y71-bd-17k"/>
+                                            <constraint firstItem="CYQ-SW-GA1" firstAttribute="top" secondItem="iRp-dz-Tkt" secondAttribute="bottom" constant="-5" id="yRV-RS-hh0"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8aE-O3-8Dq">
+                                        <rect key="frame" x="0.0" y="350" width="390" height="407"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LINE1 LINE1 LINE1 LINE1 LINE1 LINE1 LINE1 TEST TEST TEST TEST TEST TEST TEST LINE2 LINE2 LINE2 LINE2 LINE2 LINE2 LINE2" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c3h-Ge-Ksg">
+                                                <rect key="frame" x="18" y="28" width="354" height="350"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="354" id="NtZ-eE-9k3"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="OOu-Mu-4rw">
+                                                <rect key="frame" x="20" y="0.0" width="350" height="32"/>
                                                 <segments>
                                                     <segment title="512"/>
                                                     <segment title="1024"/>
@@ -41,59 +89,30 @@
                                                     <action selector="segmentedControlChanged:" destination="aqW-gh-XXX" eventType="valueChanged" id="NmK-CO-bZt"/>
                                                 </connections>
                                             </segmentedControl>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SPECTROGRAM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iRp-dz-Tkt">
-                                                <rect key="frame" x="133" y="0.0" width="124" height="25"/>
-                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" systemColor="systemBrownColor"/>
-                                        <constraints>
-                                            <constraint firstItem="iRp-dz-Tkt" firstAttribute="top" secondItem="g0C-dD-gdn" secondAttribute="top" id="0rj-EH-pHm"/>
-                                            <constraint firstItem="iRp-dz-Tkt" firstAttribute="centerX" secondItem="CYQ-SW-GA1" secondAttribute="centerX" id="0uJ-iR-RM3"/>
-                                            <constraint firstAttribute="bottom" secondItem="OOu-Mu-4rw" secondAttribute="bottom" constant="9" id="2l2-QM-jck"/>
-                                            <constraint firstAttribute="trailing" secondItem="OOu-Mu-4rw" secondAttribute="trailing" constant="20" symbolic="YES" id="5Ny-up-glL"/>
-                                            <constraint firstAttribute="bottom" secondItem="CYQ-SW-GA1" secondAttribute="bottom" constant="20" id="KLp-1I-68k"/>
-                                            <constraint firstItem="OOu-Mu-4rw" firstAttribute="leading" secondItem="g0C-dD-gdn" secondAttribute="leading" constant="20" symbolic="YES" id="KVq-ip-9q0"/>
-                                            <constraint firstAttribute="trailing" secondItem="CYQ-SW-GA1" secondAttribute="trailing" constant="20" id="qSg-lY-iu2"/>
-                                            <constraint firstItem="CYQ-SW-GA1" firstAttribute="leading" secondItem="g0C-dD-gdn" secondAttribute="leading" constant="20" id="tAN-s6-HI0"/>
-                                            <constraint firstItem="CYQ-SW-GA1" firstAttribute="top" secondItem="g0C-dD-gdn" secondAttribute="top" constant="20" id="y71-bd-17k"/>
-                                            <constraint firstItem="CYQ-SW-GA1" firstAttribute="top" secondItem="iRp-dz-Tkt" secondAttribute="bottom" constant="-5" id="yRV-RS-hh0"/>
-                                        </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8aE-O3-8Dq">
-                                        <rect key="frame" x="0.0" y="350" width="390" height="407"/>
-                                        <subviews>
-                                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OyO-S3-W9C">
-                                                <rect key="frame" x="75" y="28" width="240" height="128"/>
-                                                <connections>
-                                                    <segue destination="8x5-ZD-Evo" kind="embed" id="3Od-0v-dqs"/>
-                                                </connections>
-                                            </containerView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LINE1 LINE1 LINE1 LINE1 LINE1 LINE1 LINE1 TEST TEST TEST TEST TEST TEST TEST LINE2 LINE2 LINE2 LINE2 LINE2 LINE2 LINE2" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c3h-Ge-Ksg">
-                                                <rect key="frame" x="18" y="28" width="354" height="350"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="354" id="NtZ-eE-9k3"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FRAME SIZE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" id="gCu-XP-6Ja">
+                                                <rect key="frame" x="133" y="28" width="124" height="25"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="11"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gt3-f5-dXx">
-                                                <rect key="frame" x="122" y="270" width="113" height="31"/>
+                                                <rect key="frame" x="122" y="95" width="147" height="72"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="tinted" title="Spectral View"/>
+                                                <connections>
+                                                    <action selector="spectralViewButtonPressed:" destination="aqW-gh-XXX" eventType="touchUpInside" id="ntn-54-t4L"/>
+                                                    <segue destination="8x5-ZD-Evo" kind="show" id="HeC-DF-bCk"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="OyO-S3-W9C" secondAttribute="bottom" constant="251" id="Bfz-Ja-9oj"/>
+                                            <constraint firstAttribute="trailing" secondItem="OOu-Mu-4rw" secondAttribute="trailing" constant="22" id="6DO-1b-K67"/>
                                             <constraint firstItem="c3h-Ge-Ksg" firstAttribute="centerX" secondItem="8aE-O3-8Dq" secondAttribute="centerX" id="F11-Qy-qOH"/>
-                                            <constraint firstItem="OyO-S3-W9C" firstAttribute="centerX" secondItem="c3h-Ge-Ksg" secondAttribute="centerX" id="GJ0-Ia-sS6"/>
-                                            <constraint firstItem="OyO-S3-W9C" firstAttribute="leading" secondItem="8aE-O3-8Dq" secondAttribute="leading" constant="75" id="K1B-nd-AHh"/>
+                                            <constraint firstItem="OOu-Mu-4rw" firstAttribute="leading" secondItem="8aE-O3-8Dq" secondAttribute="leading" constant="18" id="VP1-Zo-Y9X"/>
                                             <constraint firstAttribute="height" constant="407" id="Xe8-fU-P6g"/>
-                                            <constraint firstItem="OyO-S3-W9C" firstAttribute="top" secondItem="c3h-Ge-Ksg" secondAttribute="top" id="eBe-kO-5rn"/>
+                                            <constraint firstAttribute="bottom" secondItem="OOu-Mu-4rw" secondAttribute="bottom" constant="394" id="Yp9-Pi-nL8"/>
                                             <constraint firstItem="c3h-Ge-Ksg" firstAttribute="top" secondItem="8aE-O3-8Dq" secondAttribute="top" constant="28" id="grO-jG-zqI"/>
                                             <constraint firstAttribute="trailing" secondItem="c3h-Ge-Ksg" secondAttribute="trailing" constant="18" id="qcc-VS-9Lt"/>
                                             <constraint firstItem="c3h-Ge-Ksg" firstAttribute="leading" secondItem="8aE-O3-8Dq" secondAttribute="leading" constant="18" id="wWn-xo-g1s"/>
@@ -121,7 +140,11 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="spectralViewButton" destination="gt3-f5-dXx" id="NpF-1d-ylH"/>
                         <outlet property="spectrogramContainer" destination="CYQ-SW-GA1" id="IKG-or-UoR"/>
+                        <outlet property="twentykHzLabel" destination="g3Q-4k-LHq" id="qma-Sl-d4e"/>
+                        <outlet property="yaxisLabel" destination="KIE-29-uhq" id="8e5-ZN-gmG"/>
+                        <outlet property="zeroHzLabel" destination="ufz-n1-LK3" id="vNB-Mv-KdO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sZF-d2-iVZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -146,7 +169,7 @@
             </objects>
             <point key="canvasLocation" x="138.75" y="137.32394366197184"/>
         </scene>
-        <!--Multi Video View Controller-->
+        <!--Examples-->
         <scene sceneID="adp-kO-U3Z">
             <objects>
                 <viewController id="BMO-ja-kR4" customClass="MultiVideoViewController" customModule="accelerate_audio_spectrogram" customModuleProvider="target" sceneMemberID="viewController">
@@ -545,7 +568,7 @@
                             <constraint firstAttribute="bottom" secondItem="Ay9-8d-3id" secondAttribute="bottom" constant="83" id="ydZ-ew-Nhw"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="OKX-fc-8UI"/>
+                    <navigationItem key="navigationItem" title="Examples" id="OKX-fc-8UI"/>
                     <connections>
                         <outletCollection property="containers" destination="te1-nX-IP2" collectionClass="NSMutableArray" id="4Xb-4Q-R1u"/>
                         <outletCollection property="containers" destination="89W-ah-oEi" collectionClass="NSMutableArray" id="t2A-6x-xk5"/>
@@ -559,24 +582,24 @@
             </objects>
             <point key="canvasLocation" x="1780" y="138.6255924170616"/>
         </scene>
-        <!--Spectral View Controller-->
+        <!--Spectral View-->
         <scene sceneID="d1l-SX-y26">
             <objects>
                 <viewController id="8x5-ZD-Evo" customClass="SpectralViewController" customModule="accelerate_audio_spectrogram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DMi-ZA-FZL" customClass="SpectralView" customModule="accelerate_audio_spectrogram" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="756"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="F0c-B3-tyE"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="BIg-Qc-GLA"/>
+                    <navigationItem key="navigationItem" title="Spectral View" id="BIg-Qc-GLA"/>
                     <connections>
-                        <outlet property="spectralView" destination="DMi-ZA-FZL" id="h2P-II-vsP"/>
+                        <outlet property="spectralView" destination="DMi-ZA-FZL" id="ctU-lV-8Il"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vSS-IT-tw0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="758" y="611"/>
+            <point key="canvasLocation" x="956.92307692307691" y="900.71090047393363"/>
         </scene>
     </scenes>
     <resources>

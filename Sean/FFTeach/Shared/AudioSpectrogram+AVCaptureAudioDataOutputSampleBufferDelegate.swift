@@ -141,7 +141,3 @@ extension AudioSpectrogram: AVCaptureAudioDataOutputSampleBufferDelegate {
         }
     }
 }
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
