@@ -14,7 +14,13 @@ class HomeViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    override var prefersHomeIndicatorAutoHidden: Bool {
+        true
+    }
     
+    override var prefersStatusBarHidden: Bool {
+        true
+    }
 
     /*
     // MARK: - Navigation

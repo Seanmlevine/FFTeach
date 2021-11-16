@@ -13,7 +13,7 @@ import AVFoundation
 
 class SpectrogramExampleViewController: UIViewController {
 
-    @IBOutlet weak var exampleButton: UIButton!
+    @IBOutlet weak var exampleDropDown: UIButton!
     @IBOutlet weak var videoContainer: VideoContainer!
     @IBOutlet weak var exampleText: UILabel!
     
@@ -52,7 +52,6 @@ class SpectrogramExampleViewController: UIViewController {
     override var prefersStatusBarHidden: Bool {
         true
     }
-
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
     }

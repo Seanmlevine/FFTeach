@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="F02-68-IIm">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -20,7 +20,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="isf-Fe-it1">
                                 <rect key="frame" x="10" y="88" width="394" height="394"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ktF-Jj-QZS">
+                                    <view opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ktF-Jj-QZS">
                                         <rect key="frame" x="8" y="8" width="378" height="378"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
@@ -72,12 +72,12 @@
                     <navigationItem key="navigationItem" title="Spectrogram" largeTitleDisplayMode="always" id="009-7s-OEo">
                         <barButtonItem key="rightBarButtonItem" title="Examples&gt;" id="aDN-Zr-Jgz">
                             <connections>
-                                <segue destination="DoY-wu-O3L" kind="show" id="xrS-Ri-myL"/>
+                                <segue destination="DoY-wu-O3L" kind="show" animates="NO" id="xrS-Ri-myL"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="spectrogramContainer" destination="ktF-Jj-QZS" id="R37-Dy-yJD"/>
+                        <outlet property="spectrogramContainer" destination="ktF-Jj-QZS" id="TIY-Lv-aZq"/>
                         <outlet property="spectrogramText" destination="sPE-xP-p4D" id="YsQ-Kj-Z84"/>
                     </connections>
                 </viewController>
@@ -115,17 +115,28 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vww-Om-XSH">
-                                <rect key="frame" x="187" y="532" width="41" height="30"/>
+                                <rect key="frame" x="140" y="532" width="134" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <menu key="menu" title="Choose Example" id="myf-Hf-9eE">
                                     <menuOptions key="menuOptions" singleSelection="YES"/>
                                     <children>
-                                        <command title="Item 1" id="Uve-dv-tis" userLabel="Bass Drum"/>
-                                        <command title="Item 2" id="2Gl-F2-9DX" userLabel="Noise"/>
+                                        <command title="Bass Drum" id="Uve-dv-tis" userLabel="Bass Drum"/>
+                                        <command title="Noise" id="2Gl-F2-9DX" userLabel="Noise"/>
+                                        <command title="Square Wave" id="2aY-73-FAg"/>
+                                        <command title="Piano Scale" id="8Kx-X4-AFh"/>
+                                        <command title="Song File" id="JuG-7y-vxh"/>
                                     </children>
                                 </menu>
                                 <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Button"/>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Select an Example" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ro2-Tk-N1a">
+                                <rect key="frame" x="137" y="503" width="140" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="LU1-WR-SC3"/>
                         <color key="backgroundColor" systemColor="systemFillColor"/>
@@ -144,6 +155,7 @@
                     <navigationItem key="navigationItem" title="Examples" id="TSk-XL-VXj"/>
                     <connections>
                         <outlet property="DropDown" destination="myf-Hf-9eE" id="XSq-5j-jqb"/>
+                        <outlet property="exampleDropDown" destination="vww-Om-XSH" id="MQ3-8K-x8L"/>
                         <outlet property="exampleText" destination="s6s-na-0GP" id="SWb-Da-BAp"/>
                         <outlet property="videoContainer" destination="yIx-AT-trS" id="U5y-qG-Tgg"/>
                     </connections>
@@ -155,29 +167,33 @@
         <!--Home View Controller-->
         <scene sceneID="RRz-7u-JBk">
             <objects>
-                <viewController id="uMe-8B-FVq" customClass="HomeViewController" sceneMemberID="viewController">
+                <viewController id="uMe-8B-FVq" customClass="HomeViewController" customModule="FFTeach" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9Lx-CS-1HG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H6c-f8-qE0">
-                                <rect key="frame" x="112" y="278" width="191" height="101"/>
+                                <rect key="frame" x="122" y="277" width="170" height="101"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Spectrogram View"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Spectrogram View" titleAlignment="center"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="nsw-y8-dRH"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" animates="NO" id="nsw-y8-dRH"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WYa-F7-tPs">
-                                <rect key="frame" x="110" y="518" width="195" height="101"/>
+                                <rect key="frame" x="122" y="519" width="170" height="101"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Frequency Response View"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Frequency Response View" titleAlignment="automatic"/>
                                 <connections>
-                                    <segue destination="fyl-6C-ViC" kind="show" id="okJ-HM-TUI"/>
+                                    <segue destination="fyl-6C-ViC" kind="show" animates="NO" id="okJ-HM-TUI"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="waveform.and.mic" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="hSr-63-EKi">
+                                <rect key="frame" x="170" y="411" width="76" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dGM-Zw-y42"/>
                         <color key="backgroundColor" systemColor="systemFillColor"/>
@@ -269,6 +285,7 @@
     </scenes>
     <color key="tintColor" systemColor="tintColor"/>
     <resources>
+        <image name="waveform.and.mic" catalog="system" width="128" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
