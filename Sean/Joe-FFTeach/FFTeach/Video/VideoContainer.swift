@@ -1,5 +1,5 @@
 //
-//  VideoContainer.swift
+//  ViewContainer.swift
 //  FFTeach
 //
 //  Created by Sean Levine on 11/12/21.

@@ -1,5 +1,6 @@
 //
-//  VideoViewController.swift
+//  VideoViewController1.swift
+//  accelerate-audio-spectrogram
 //
 //  Created by Joseph Taylor on 10/24/21.
 //  Copyright © 2021 Apple. All rights reserved.
