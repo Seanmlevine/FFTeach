@@ -1,6 +1,5 @@
 //
-//  SecondViewController.swift
-//  accelerate-audio-spectrogram
+//  SpectrogramExampleViewController.swift
 //
 //  Created by Sean Levine on 10/20/21.
 //  Copyright © 2021 Apple. All rights reserved.
@@ -13,7 +12,6 @@ import AVFoundation
 
 class SpectrogramExampleViewController: UIViewController {
 
-    @IBOutlet weak var exampleDropDown: UIButton!
     @IBOutlet weak var videoContainer: VideoContainer!
     @IBOutlet weak var exampleText: UILabel!
     
@@ -41,8 +39,6 @@ class SpectrogramExampleViewController: UIViewController {
         // Centers "spectrogramText" horizontally within the view
         exampleText.textAlignment = .center
         
-
-        //exampleButton.menu.addItems(withTitles: "Bass Drum", "Noise", "Snare", "Square Wave", "Piano Scale", "Song File")
     }
     
     override var prefersHomeIndicatorAutoHidden: Bool {
@@ -56,44 +52,11 @@ class SpectrogramExampleViewController: UIViewController {
         super.viewDidAppear(animated)
     }
     
-    /*
-    func playVideo() {
-
-        let filepath: String? = Bundle.main.path(forResource: "BassDrum", ofType: "mov")
-        let fileURL = URL.init(fileURLWithPath: filepath!)
-
-        avPlayer = AVPlayer(url: fileURL)
-        let avPlayerController = AVPlayerViewController()
-        avPlayerController.player = avPlayer
-        avPlayerController.view.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height)
-
-        // Turn on video controlls
-        avPlayerController.showsPlaybackControls = true
-
-        // play video
-        self.view.addSubview(avPlayerController.view)
-        self.addChild(avPlayerController)
+    @IBAction func exampleValueChanged(_ sender: UISegmentedControl) {
+        let values = ["BassDrum", "Noise", "PianoCScale", "Snare", "SongFile", "SquareWave"]
+        videoContainer.playVideo(withName: values[sender.selectedSegmentIndex])
     }
-     */
-/*
-    var buttonBoolean = false
-    //@IBAction func spectrogramButtonPressed(_ sender: Any) {
-        if buttonBoolean == false {
-            spectrogramButton.setTitle("Stop Spectrogram", for: .normal)
-            buttonBoolean = true
-            //Starts the spectrogram
-            audioSpectrogram.startRunning()
-        } else {
-            spectrogramButton.setTitle("Start Spectrogram", for: .normal)
-            buttonBoolean = false
-            //Stops the spectrogram
-        }
-    }
-*/
-    
-    @IBOutlet weak var DropDown: UIMenu!
     
     
 }
-
 
