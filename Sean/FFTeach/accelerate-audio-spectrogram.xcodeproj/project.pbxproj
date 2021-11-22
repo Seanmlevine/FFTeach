@@ -20,11 +20,11 @@
 		3E5E85B524BF5031003E22F5 /* AudioSpectrogram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3073672372FF33000F74C3 /* AudioSpectrogram.swift */; };
 		3EDCF0CF2372EFE600637FFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDCF0CE2372EFE600637FFF /* AppDelegate.swift */; };
 		3EDCF0D12372EFE600637FFF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDCF0D02372EFE600637FFF /* SceneDelegate.swift */; };
-		3EDCF0D32372EFE600637FFF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDCF0D22372EFE600637FFF /* MainViewController.swift */; };
 		3EDCF0D62372EFE600637FFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EDCF0D42372EFE600637FFF /* Main.storyboard */; };
 		3EDCF0D82372EFE800637FFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EDCF0D72372EFE800637FFF /* Assets.xcassets */; };
 		3EDCF0DB2372EFE800637FFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EDCF0D92372EFE800637FFF /* LaunchScreen.storyboard */; };
 		3EFEABBE23730E0E00C9AC41 /* AudioSpectrogram+AVCaptureAudioDataOutputSampleBufferDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFEABBD23730E0E00C9AC41 /* AudioSpectrogram+AVCaptureAudioDataOutputSampleBufferDelegate.swift */; };
+		71383A57273EB7EC00375970 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71383A56273EB7EC00375970 /* MainViewController.swift */; };
 		717C48F12722718D00B35BFE /* SpectrogramViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717C48F02722718D00B35BFE /* SpectrogramViewController.swift */; };
 		717C48F22722718D00B35BFE /* SpectrogramViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717C48F02722718D00B35BFE /* SpectrogramViewController.swift */; };
 		71FD093C27261642000156E4 /* BassDrum.mov in Resources */ = {isa = PBXBuildFile; fileRef = 71FD093B27261642000156E4 /* BassDrum.mov */; };
@@ -49,13 +49,13 @@
 		3EDCF0CB2372EFE600637FFF /* accelerate-audio-spectrogram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "accelerate-audio-spectrogram.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EDCF0CE2372EFE600637FFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3EDCF0D02372EFE600637FFF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3EDCF0D22372EFE600637FFF /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		3EDCF0D52372EFE600637FFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3EDCF0D72372EFE800637FFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3EDCF0DA2372EFE800637FFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3EDCF0DC2372EFE800637FFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3EFEABBD23730E0E00C9AC41 /* AudioSpectrogram+AVCaptureAudioDataOutputSampleBufferDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AudioSpectrogram+AVCaptureAudioDataOutputSampleBufferDelegate.swift"; sourceTree = "<group>"; };
 		61B27D4DF2C017C525F12011 /* SampleCode.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = SampleCode.xcconfig; path = Configuration/SampleCode.xcconfig; sourceTree = "<group>"; };
+		71383A56273EB7EC00375970 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		717C48F02722718D00B35BFE /* SpectrogramViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpectrogramViewController.swift; sourceTree = "<group>"; };
 		71FD093B27261642000156E4 /* BassDrum.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = BassDrum.mov; sourceTree = "<group>"; };
 		71FD093D27261648000156E4 /* Noise.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = Noise.mov; sourceTree = "<group>"; };
@@ -134,8 +134,8 @@
 			isa = PBXGroup;
 			children = (
 				2410FF2B2731AD0800128083 /* Tempi Folder */,
-				3EDCF0D22372EFE600637FFF /* MainViewController.swift */,
 				2443F05B27333FDC0098DF79 /* MultiVideoViewController.swift */,
+				71383A56273EB7EC00375970 /* MainViewController.swift */,
 				2443F05727333C970098DF79 /* VideoContainer.swift */,
 				3EDCF0CE2372EFE600637FFF /* AppDelegate.swift */,
 				3EDCF0D02372EFE600637FFF /* SceneDelegate.swift */,
@@ -298,9 +298,9 @@
 				2410FF352731AD1900128083 /* TempiDebug.swift in Sources */,
 				2443F05C27333FDC0098DF79 /* MultiVideoViewController.swift in Sources */,
 				2410FF3A2731AD1900128083 /* TempiFFT.swift in Sources */,
-				3EDCF0D32372EFE600637FFF /* MainViewController.swift in Sources */,
 				2410FF372731AD1900128083 /* SpectralView.swift in Sources */,
 				3EDCF0CF2372EFE600637FFF /* AppDelegate.swift in Sources */,
+				71383A57273EB7EC00375970 /* MainViewController.swift in Sources */,
 				717C48F12722718D00B35BFE /* SpectrogramViewController.swift in Sources */,
 				3E30736C2372FF33000F74C3 /* AudioSpectrogram.swift in Sources */,
 				2410FF3B2731AD1900128083 /* TempiUtilities.swift in Sources */,
