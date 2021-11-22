@@ -1,9 +1,8 @@
 //
 //  SpectralViewController.swift
-//  TempiHarness
 //
-//  Created by John Scalo on 1/7/16.
-//  Copyright © 2016 John Scalo. All rights reserved.
+//  Created by Sean Levine on 11/22/2021.
+//  Copyright © 2021 Sean Levine. All rights reserved.
 //
 
 import UIKit
@@ -42,6 +41,15 @@ class SpectralViewController: UIViewController {
             self.spectralView.fft = fft
             self.spectralView.setNeedsDisplay()
         }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        audioInput.startRecording()
+    }
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        audioInput.stopRecording()
     }
     
     override func didReceiveMemoryWarning() {

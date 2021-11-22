@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -81,8 +82,9 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vFn-Lw-twg" secondAttribute="trailing" constant="10" id="yjX-uh-Dd4"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Spectrogram" image="chart.bar.xaxis" catalog="system" id="uAb-Ll-sb9"/>
                     <navigationItem key="navigationItem" title="Spectrogram" largeTitleDisplayMode="always" id="009-7s-OEo">
-                        <barButtonItem key="rightBarButtonItem" title="Examples&gt;" id="aDN-Zr-Jgz">
+                        <barButtonItem key="rightBarButtonItem" title="Examples" id="aDN-Zr-Jgz">
                             <connections>
                                 <segue destination="DoY-wu-O3L" kind="show" animates="NO" id="xrS-Ri-myL"/>
                             </connections>
@@ -95,7 +97,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2828.985507246377" y="-1526.1160714285713"/>
+            <point key="canvasLocation" x="2588" y="-1526"/>
         </scene>
         <!--Examples-->
         <scene sceneID="0oW-5e-VaY">
@@ -181,7 +183,7 @@
             </objects>
             <point key="canvasLocation" x="3700.0000000000005" y="-1526.1160714285713"/>
         </scene>
-        <!--Home View Controller-->
+        <!--Home-->
         <scene sceneID="RRz-7u-JBk">
             <objects>
                 <viewController id="uMe-8B-FVq" customClass="HomeViewController" customModule="FFTeach" customModuleProvider="target" sceneMemberID="viewController">
@@ -189,32 +191,58 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H6c-f8-qE0">
-                                <rect key="frame" x="122" y="277" width="170" height="101"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="247" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H6c-f8-qE0">
+                                <rect key="frame" x="69" y="188" width="274" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="aec-7J-pJg"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" priority="750" constant="275" id="nrR-rj-RuZ"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Spectrogram View" titleAlignment="center"/>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" animates="NO" id="nsw-y8-dRH"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WYa-F7-tPs">
-                                <rect key="frame" x="122" y="519" width="170" height="101"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WYa-F7-tPs">
+                                <rect key="frame" x="69.5" y="592" width="275" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="Lyf-Xd-zl8"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" priority="750" constant="275" id="coo-LU-BEb"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Frequency Response View" titleAlignment="automatic"/>
                                 <connections>
                                     <segue destination="fyl-6C-ViC" kind="show" animates="NO" id="okJ-HM-TUI"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="waveform.and.mic" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="hSr-63-EKi">
-                                <rect key="frame" x="170" y="411" width="76" height="66"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalHuggingPriority="248" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" image="waveform.and.mic" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="hSr-63-EKi">
+                                <rect key="frame" x="157" y="398" width="100.5" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="2fg-SA-L27"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="A2C-jw-Cvj"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dGM-Zw-y42"/>
-                        <color key="backgroundColor" systemColor="systemFillColor"/>
+                        <color key="backgroundColor" systemColor="secondarySystemFillColor"/>
+                        <constraints>
+                            <constraint firstItem="dGM-Zw-y42" firstAttribute="bottom" secondItem="WYa-F7-tPs" secondAttribute="bottom" priority="999" constant="128" id="22X-PW-RqE"/>
+                            <constraint firstItem="H6c-f8-qE0" firstAttribute="top" secondItem="dGM-Zw-y42" secondAttribute="top" priority="750" constant="128" id="VDh-DQ-pUL"/>
+                            <constraint firstItem="hSr-63-EKi" firstAttribute="top" secondItem="H6c-f8-qE0" secondAttribute="bottom" constant="94" id="alI-1T-yZA"/>
+                            <constraint firstItem="H6c-f8-qE0" firstAttribute="centerX" secondItem="9Lx-CS-1HG" secondAttribute="centerX" id="fHI-kE-rQM"/>
+                            <constraint firstItem="dGM-Zw-y42" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="H6c-f8-qE0" secondAttribute="trailing" id="fwN-gW-XbF"/>
+                            <constraint firstItem="WYa-F7-tPs" firstAttribute="top" secondItem="hSr-63-EKi" secondAttribute="bottom" constant="94" id="k0E-yB-117"/>
+                            <constraint firstItem="hSr-63-EKi" firstAttribute="centerY" secondItem="9Lx-CS-1HG" secondAttribute="centerY" id="kok-S8-MlQ"/>
+                            <constraint firstItem="dGM-Zw-y42" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="WYa-F7-tPs" secondAttribute="trailing" id="l33-QR-hv5"/>
+                            <constraint firstItem="WYa-F7-tPs" firstAttribute="centerX" secondItem="9Lx-CS-1HG" secondAttribute="centerX" id="okx-vJ-XqJ"/>
+                            <constraint firstItem="H6c-f8-qE0" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="dGM-Zw-y42" secondAttribute="leading" id="pBc-dC-ROa"/>
+                            <constraint firstItem="WYa-F7-tPs" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="dGM-Zw-y42" secondAttribute="leading" id="qNf-q5-r35"/>
+                            <constraint firstItem="hSr-63-EKi" firstAttribute="centerX" secondItem="9Lx-CS-1HG" secondAttribute="centerX" id="wAV-JD-dey"/>
+                        </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Home" id="34Q-N5-hBk">
+                        <imageReference key="image" image="house.fill" catalog="system" symbolScale="large"/>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" id="lP6-of-s6K"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dq1-1Y-aX0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -257,11 +285,12 @@
                             <constraint firstItem="Ysx-5n-q4w" firstAttribute="top" secondItem="PVo-g4-2w6" secondAttribute="top" id="zft-Bq-z2R"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Frequency Response" image="waveform.path.ecg.rectangle" catalog="system" id="D2w-To-9ZY"/>
                     <navigationItem key="navigationItem" title="FFT" id="bRT-vM-EHd"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hMd-hD-nUa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2830" y="-422"/>
+            <point key="canvasLocation" x="2587" y="-320"/>
         </scene>
         <!--Spectral View Controller-->
         <scene sceneID="bOC-ob-WoO">
@@ -279,30 +308,63 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QI8-J6-v2Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2829" y="139"/>
+            <point key="canvasLocation" x="2587" y="262"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1oB-32-OSf">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="F02-68-IIm" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="NavBar" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="F02-68-IIm" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="b5c-Hq-jxI">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mFc-Nw-iEP">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
-                        <segue destination="uMe-8B-FVq" kind="relationship" relationship="rootViewController" id="lOd-ST-xAZ"/>
+                        <segue destination="jvh-09-uRA" kind="relationship" relationship="rootViewController" id="fqB-TC-YTq"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1mg-hq-QpO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="882.60869565217399" y="-915.40178571428567"/>
+            <point key="canvasLocation" x="-216" y="-915"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="nwQ-9l-zRs">
+            <objects>
+                <tabBarController useStoryboardIdentifierAsRestorationIdentifier="YES" id="jvh-09-uRA" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="53d-54-fQc"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="FQt-vV-aF3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="uMe-8B-FVq" kind="relationship" relationship="viewControllers" id="ZRj-QK-x2W"/>
+                        <segue destination="fyl-6C-ViC" kind="relationship" relationship="viewControllers" id="3v0-XE-yvV"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="pHo-87-Va7"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="boG-xl-gN7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="738" y="-915"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="okJ-HM-TUI"/>
+        <segue reference="nsw-y8-dRH"/>
+    </inferredMetricsTieBreakers>
     <color key="tintColor" systemColor="tintColor"/>
     <resources>
+        <image name="chart.bar.xaxis" catalog="system" width="128" height="98"/>
+        <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="waveform.and.mic" catalog="system" width="128" height="128"/>
+        <image name="waveform.path.ecg.rectangle" catalog="system" width="128" height="93"/>
+        <systemColor name="secondarySystemFillColor">
+            <color red="0.47058823529411764" green="0.47058823529411764" blue="0.50196078431372548" alpha="0.16" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -84,6 +84,13 @@ class SpecViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        audioSpectrogram.startRunning()
+
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        audioSpectrogram.stopRunning()
     }
     
     func set(sampleCount: Int) {

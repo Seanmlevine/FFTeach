@@ -50,7 +50,6 @@ class SpectrogramExampleViewController: UIViewController {
     override var prefersStatusBarHidden: Bool {
         true
     }
-=
     @IBAction func dropDownChanged(_ sender: UIMenuElement) {
         
     }
