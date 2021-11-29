@@ -18,10 +18,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="isf-Fe-it1">
-                                <rect key="frame" x="10" y="88" width="394" height="394"/>
+                                <rect key="frame" x="10" y="88" width="394" height="345"/>
                                 <subviews>
                                     <view opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ktF-Jj-QZS">
-                                        <rect key="frame" x="8" y="8" width="378" height="378"/>
+                                        <rect key="frame" x="8" y="8" width="378" height="329"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
                                 </subviews>
@@ -34,13 +34,13 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sPE-xP-p4D">
-                                <rect key="frame" x="20" y="502" width="374" height="340"/>
+                                <rect key="frame" x="20" y="453" width="374" height="340"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="vFn-Lw-twg">
-                                <rect key="frame" x="10" y="525" width="394" height="32"/>
+                                <rect key="frame" x="10" y="476" width="394" height="32"/>
                                 <segments>
                                     <segment title="512"/>
                                     <segment title="1024"/>
@@ -52,7 +52,7 @@
                                 </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="Spectrogram Frame Size" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rvn-cU-HZp">
-                                <rect key="frame" x="121" y="496" width="172" height="17"/>
+                                <rect key="frame" x="121" y="447" width="172" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="172" id="cUS-4M-In9"/>
                                 </constraints>
@@ -258,10 +258,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ysx-5n-q4w">
-                                <rect key="frame" x="10" y="88" width="394" height="394"/>
+                                <rect key="frame" x="10" y="88" width="394" height="345"/>
                                 <subviews>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S5m-1f-J8C">
-                                        <rect key="frame" x="8" y="8" width="378" height="378"/>
+                                        <rect key="frame" x="8" y="8" width="378" height="329"/>
                                         <connections>
                                             <segue destination="F06-9t-t8m" kind="embed" id="sUO-zg-7Sz"/>
                                         </connections>
@@ -297,7 +297,7 @@
             <objects>
                 <viewController id="F06-9t-t8m" customClass="SpectralViewController" customModule="FFTeach" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TKI-Wi-ckX" customClass="SpectralView" customModule="FFTeach" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="378" height="378"/>
+                        <rect key="frame" x="0.0" y="0.0" width="378" height="329"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="QoU-m9-owf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -353,8 +353,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="okJ-HM-TUI"/>
-        <segue reference="nsw-y8-dRH"/>
+        <segue reference="3v0-XE-yvV"/>
+        <segue reference="pHo-87-Va7"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" systemColor="tintColor"/>
     <resources>
