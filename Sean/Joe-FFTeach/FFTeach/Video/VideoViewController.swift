@@ -6,6 +6,8 @@
 //  Copyright © 2021 Apple. All rights reserved.
 //
 
+//Deprecated
+
 import AVFoundation
 import Accelerate
 import UIKit
@@ -22,7 +24,7 @@ class VideoViewController: UIViewController {
     
     func playVideo() {
 
-        let filepath: String? = Bundle.main.path(forResource: "BassDrum", ofType: "mov")
+        let filepath: String? = Bundle.main.path(forResource: "BassDrumSpec", ofType: "mov")
         let fileURL = URL.init(fileURLWithPath: filepath!)
 
         avPlayer = AVPlayer(url: fileURL)

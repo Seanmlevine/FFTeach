@@ -13,16 +13,14 @@ import AVFoundation
 class SpectrogramExampleViewController: UIViewController {
 
 
-    @IBOutlet weak var exampleDropDown: UIButton!
     @IBOutlet weak var videoContainer: VideoContainer!
     @IBOutlet weak var exampleText: UILabel!
     
     var avPlayer: AVPlayer!
     
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        let videoNames = ["Bass Drum", "Noise", "Snare", "Square Wave", "Piano Scale", "Song File"]
-        videoContainer.playVideo(withName: videoNames[1])
+        let videoNames = ["BassDrumSpec", "NoiseSpec", "SnareSpec", "SquareWaveSpec", "PianoSpec", "SongFileSpec", "SineWaveSpec"]
+        videoContainer.playVideo(withName: videoNames[0])
     }
     
     override func viewDidLoad() {
@@ -59,7 +57,7 @@ class SpectrogramExampleViewController: UIViewController {
     }
     
     @IBAction func exampleValueChanged(_ sender: UISegmentedControl) {
-        let values = ["BassDrum", "Noise", "PianoCScale", "Snare", "SongFile", "SquareWave"]
+        let values = ["BassDrumSpec", "NoiseSpec", "PianoSpec", "SnareSpec", "SongFileSpec", "SquareWaveSpec", "SineWaveSpec"]
         videoContainer.playVideo(withName: values[sender.selectedSegmentIndex])
     }
     
