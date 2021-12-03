@@ -12,12 +12,10 @@
 		246F857A2755369700F5B952 /* SnareFreq.mov in Resources */ = {isa = PBXBuildFile; fileRef = 246F85742755369700F5B952 /* SnareFreq.mov */; };
 		246F857B2755369700F5B952 /* PianoFreq.mov in Resources */ = {isa = PBXBuildFile; fileRef = 246F85752755369700F5B952 /* PianoFreq.mov */; };
 		246F857C2755369700F5B952 /* SquareWaveFreq.mov in Resources */ = {isa = PBXBuildFile; fileRef = 246F85762755369700F5B952 /* SquareWaveFreq.mov */; };
-		246F857D2755369700F5B952 /* SongFileFreq.mov in Resources */ = {isa = PBXBuildFile; fileRef = 246F85772755369700F5B952 /* SongFileFreq.mov */; };
 		246F85862755376D00F5B952 /* BassDrumSpec.mov in Resources */ = {isa = PBXBuildFile; fileRef = 246F857F2755376D00F5B952 /* BassDrumSpec.mov */; };
 		246F85872755376D00F5B952 /* SnareSpec.mov in Resources */ = {isa = PBXBuildFile; fileRef = 246F85802755376D00F5B952 /* SnareSpec.mov */; };
 		246F85882755376D00F5B952 /* PianoSpec.mov in Resources */ = {isa = PBXBuildFile; fileRef = 246F85812755376D00F5B952 /* PianoSpec.mov */; };
 		246F85892755376D00F5B952 /* NoiseSpec.mov in Resources */ = {isa = PBXBuildFile; fileRef = 246F85822755376D00F5B952 /* NoiseSpec.mov */; };
-		246F858A2755376D00F5B952 /* SongFileSpec.mov in Resources */ = {isa = PBXBuildFile; fileRef = 246F85832755376D00F5B952 /* SongFileSpec.mov */; };
 		246F858B2755376D00F5B952 /* SineWaveSpec.mov in Resources */ = {isa = PBXBuildFile; fileRef = 246F85842755376D00F5B952 /* SineWaveSpec.mov */; };
 		246F858C2755376D00F5B952 /* SquareWaveSpec.mov in Resources */ = {isa = PBXBuildFile; fileRef = 246F85852755376D00F5B952 /* SquareWaveSpec.mov */; };
 		246F858E2755386E00F5B952 /* FreqExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246F858D2755386E00F5B952 /* FreqExampleViewController.swift */; };
@@ -73,12 +71,10 @@
 		246F85742755369700F5B952 /* SnareFreq.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = SnareFreq.mov; sourceTree = "<group>"; };
 		246F85752755369700F5B952 /* PianoFreq.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = PianoFreq.mov; sourceTree = "<group>"; };
 		246F85762755369700F5B952 /* SquareWaveFreq.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = SquareWaveFreq.mov; sourceTree = "<group>"; };
-		246F85772755369700F5B952 /* SongFileFreq.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = SongFileFreq.mov; sourceTree = "<group>"; };
 		246F857F2755376D00F5B952 /* BassDrumSpec.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = BassDrumSpec.mov; sourceTree = "<group>"; };
 		246F85802755376D00F5B952 /* SnareSpec.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = SnareSpec.mov; sourceTree = "<group>"; };
 		246F85812755376D00F5B952 /* PianoSpec.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = PianoSpec.mov; sourceTree = "<group>"; };
 		246F85822755376D00F5B952 /* NoiseSpec.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = NoiseSpec.mov; sourceTree = "<group>"; };
-		246F85832755376D00F5B952 /* SongFileSpec.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = SongFileSpec.mov; sourceTree = "<group>"; };
 		246F85842755376D00F5B952 /* SineWaveSpec.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = SineWaveSpec.mov; sourceTree = "<group>"; };
 		246F85852755376D00F5B952 /* SquareWaveSpec.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = SquareWaveSpec.mov; sourceTree = "<group>"; };
 		246F858D2755386E00F5B952 /* FreqExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FreqExampleViewController.swift; path = ../../../../../../../FreqExampleViewController.swift; sourceTree = "<group>"; };
@@ -148,7 +144,6 @@
 				246F85742755369700F5B952 /* SnareFreq.mov */,
 				246F85752755369700F5B952 /* PianoFreq.mov */,
 				246F85762755369700F5B952 /* SquareWaveFreq.mov */,
-				246F85772755369700F5B952 /* SongFileFreq.mov */,
 			);
 			path = "Freq Response Examples wSound";
 			sourceTree = "<group>";
@@ -160,7 +155,6 @@
 				246F85802755376D00F5B952 /* SnareSpec.mov */,
 				246F85812755376D00F5B952 /* PianoSpec.mov */,
 				246F85822755376D00F5B952 /* NoiseSpec.mov */,
-				246F85832755376D00F5B952 /* SongFileSpec.mov */,
 				246F85842755376D00F5B952 /* SineWaveSpec.mov */,
 				246F85852755376D00F5B952 /* SquareWaveSpec.mov */,
 			);
@@ -375,10 +369,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				246F858A2755376D00F5B952 /* SongFileSpec.mov in Resources */,
 				246F858C2755376D00F5B952 /* SquareWaveSpec.mov in Resources */,
 				71389D07272C1F5300BC14C0 /* Noise.mov in Resources */,
-				246F857D2755369700F5B952 /* SongFileFreq.mov in Resources */,
 				246F85862755376D00F5B952 /* BassDrumSpec.mov in Resources */,
 				246F85782755369700F5B952 /* BassDrumFreq.mov in Resources */,
 				246F85872755376D00F5B952 /* SnareSpec.mov in Resources */,

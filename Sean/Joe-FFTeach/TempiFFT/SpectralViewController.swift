@@ -27,7 +27,7 @@ class SpectralViewController: UIViewController {
 
     func gotSomeAudio(timeStamp: Double, numberOfFrames: Int, samples: [Float]) {
         // NB: The default buffer size on iOS is 512. This will not give a terribly high resolution. In practice you'll want to bucket up the buffers into a larger array of at least size 2048.
-        let fft = TempiFFT(withSize: numberOfFrames, sampleRate: 44100.0)
+        let fft = TempiFFT(withSize: 1024, sampleRate: 44100.0)
         fft.windowType = TempiFFTWindowType.hanning
         fft.fftForward(samples)
         

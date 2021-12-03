@@ -10,8 +10,7 @@ import UIKit
 import AVKit
 import AVFoundation
 
-class SpectrogramExampleViewController: UIViewController {
-
+class FreqExampleViewController: UIViewController {
 
     @IBOutlet weak var videoContainer: VideoContainer!
     @IBOutlet weak var exampleText: UILabel!
@@ -19,7 +18,8 @@ class SpectrogramExampleViewController: UIViewController {
     var avPlayer: AVPlayer!
     
     override func viewWillAppear(_ animated: Bool) {
-        let videoNames = ["BassDrumSpec", "NoiseSpec", "SnareSpec", "SquareWaveSpec", "PianoSpec", "SineWaveSpec"]
+        super.viewWillAppear(animated)
+        let videoNames = ["BassDrumFreq", "SineWaveFreq", "SnareFreq", "SquareWaveFreq", "PianoFreq"]
         videoContainer.playVideo(withName: videoNames[0])
     }
     
@@ -57,7 +57,7 @@ class SpectrogramExampleViewController: UIViewController {
     }
     
     @IBAction func exampleValueChanged(_ sender: UISegmentedControl) {
-        let values = ["BassDrumSpec", "NoiseSpec", "PianoSpec", "SnareSpec", "SquareWaveSpec", "SineWaveSpec"]
+        let values = ["BassDrumFreq", "SineWaveFreq", "PianoFreq", "SnareFreq", "SquareWaveFreq"]
         videoContainer.playVideo(withName: values[sender.selectedSegmentIndex])
     }
     
