@@ -24,7 +24,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "D556C45B-3A2D-438C-A64B-11937A6E00E2"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TempiFFT/TempiFFT.swift"
@@ -88,7 +88,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "04DBF1A1-DB89-452A-873B-0817297C0B26"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TempiFFT/TempiFFT.swift"
@@ -101,7 +101,7 @@
             <Locations>
                <Location
                   uuid = "04DBF1A1-DB89-452A-873B-0817297C0B26 - b6f0d232a477f091"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "FFTeach.TempiFFT.__allocating_init(withSize: Swift.Int, sampleRate: Swift.Float) -&gt; FFTeach.TempiFFT"
@@ -116,7 +116,7 @@
                </Location>
                <Location
                   uuid = "04DBF1A1-DB89-452A-873B-0817297C0B26 - 45317f653b95a724"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "FFTeach.TempiFFT.init(withSize: Swift.Int, sampleRate: Swift.Float) -&gt; FFTeach.TempiFFT"
@@ -152,7 +152,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "A0C0D806-AFF4-4BDC-8652-CFD654570025"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TempiFFT/TempiAudioInput.swift"
@@ -216,7 +216,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "F69423D6-C58D-40A2-814D-E92F2C989642"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TempiFFT/TempiAudioInput.swift"
@@ -232,7 +232,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "C0803A7B-955D-489C-9AF2-ABE488DA01D3"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TempiFFT/TempiAudioInput.swift"

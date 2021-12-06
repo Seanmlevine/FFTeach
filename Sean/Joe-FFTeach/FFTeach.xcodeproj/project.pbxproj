@@ -28,6 +28,9 @@
 		24A31877273EBB460049EEAE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A31876273EBB460049EEAE /* HomeViewController.swift */; };
 		24A31879273EBBA30049EEAE /* VideoContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A31878273EBBA20049EEAE /* VideoContainer.swift */; };
 		24A3187C273EBC670049EEAE /* SpectrogramExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A3187B273EBC670049EEAE /* SpectrogramExampleViewController.swift */; };
+		24E4C44D275A648D0099009B /* FAQView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E4C44C275A648D0099009B /* FAQView.swift */; };
+		24E4C44F275A64BF0099009B /* FAQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E4C44E275A64BF0099009B /* FAQViewController.swift */; };
+		24E4C452275A6B9E0099009B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E4C451275A6B9E0099009B /* Extensions.swift */; };
 		71389CC9272C1D1800BC14C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71389CC8272C1D1800BC14C0 /* AppDelegate.swift */; };
 		71389CCB272C1D1800BC14C0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71389CCA272C1D1800BC14C0 /* SceneDelegate.swift */; };
 		71389CCD272C1D1800BC14C0 /* SpecViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71389CCC272C1D1800BC14C0 /* SpecViewController.swift */; };
@@ -77,7 +80,7 @@
 		246F85822755376D00F5B952 /* NoiseSpec.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = NoiseSpec.mov; sourceTree = "<group>"; };
 		246F85842755376D00F5B952 /* SineWaveSpec.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = SineWaveSpec.mov; sourceTree = "<group>"; };
 		246F85852755376D00F5B952 /* SquareWaveSpec.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = SquareWaveSpec.mov; sourceTree = "<group>"; };
-		246F858D2755386E00F5B952 /* FreqExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FreqExampleViewController.swift; path = ../../../../../../../FreqExampleViewController.swift; sourceTree = "<group>"; };
+		246F858D2755386E00F5B952 /* FreqExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FreqExampleViewController.swift; sourceTree = "<group>"; };
 		24A3185E273EBA730049EEAE /* TempiDebug.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TempiDebug.swift; sourceTree = "<group>"; };
 		24A3185F273EBA730049EEAE /* SpectralViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpectralViewController.swift; sourceTree = "<group>"; };
 		24A31861273EBA730049EEAE /* SpectralView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpectralView.swift; sourceTree = "<group>"; };
@@ -87,6 +90,9 @@
 		24A31876273EBB460049EEAE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		24A31878273EBBA20049EEAE /* VideoContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoContainer.swift; sourceTree = "<group>"; };
 		24A3187B273EBC670049EEAE /* SpectrogramExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpectrogramExampleViewController.swift; path = FFTeach/SpectrogramExampleViewController.swift; sourceTree = SOURCE_ROOT; };
+		24E4C44C275A648D0099009B /* FAQView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQView.swift; sourceTree = "<group>"; };
+		24E4C44E275A64BF0099009B /* FAQViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQViewController.swift; sourceTree = "<group>"; };
+		24E4C451275A6B9E0099009B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = FFTeach/Extensions.swift; sourceTree = SOURCE_ROOT; };
 		71389CC5272C1D1800BC14C0 /* FFTeach.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FFTeach.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71389CC8272C1D1800BC14C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		71389CCA272C1D1800BC14C0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -185,6 +191,16 @@
 			path = Video;
 			sourceTree = "<group>";
 		};
+		24E4C450275A68470099009B /* FAQ */ = {
+			isa = PBXGroup;
+			children = (
+				24E4C44C275A648D0099009B /* FAQView.swift */,
+				24E4C44E275A64BF0099009B /* FAQViewController.swift */,
+				24E4C451275A6B9E0099009B /* Extensions.swift */,
+			);
+			path = FAQ;
+			sourceTree = "<group>";
+		};
 		71360ECF2733162D009D0810 /* Spectrogram */ = {
 			isa = PBXGroup;
 			children = (
@@ -226,6 +242,7 @@
 				71389CCA272C1D1800BC14C0 /* SceneDelegate.swift */,
 				24A31876273EBB460049EEAE /* HomeViewController.swift */,
 				71389CCC272C1D1800BC14C0 /* SpecViewController.swift */,
+				24E4C450275A68470099009B /* FAQ */,
 				24A3187A273EBBFD0049EEAE /* Video */,
 				71389CD1272C1D1900BC14C0 /* Assets.xcassets */,
 				71389CCE272C1D1800BC14C0 /* Main.storyboard */,
@@ -419,6 +436,8 @@
 				246F858E2755386E00F5B952 /* FreqExampleViewController.swift in Sources */,
 				24A3186B273EBA730049EEAE /* TempiDebug.swift in Sources */,
 				71389D01272C1E4200BC14C0 /* VideoViewController.swift in Sources */,
+				24E4C44D275A648D0099009B /* FAQView.swift in Sources */,
+				24E4C452275A6B9E0099009B /* Extensions.swift in Sources */,
 				24A31873273EBA730049EEAE /* TempiUtilities.swift in Sources */,
 				71389CCD272C1D1800BC14C0 /* SpecViewController.swift in Sources */,
 				71389CFC272C1D9700BC14C0 /* AudioSpectrogram.swift in Sources */,
@@ -427,6 +446,7 @@
 				71389CC9272C1D1800BC14C0 /* AppDelegate.swift in Sources */,
 				24A31879273EBBA30049EEAE /* VideoContainer.swift in Sources */,
 				24A3186C273EBA730049EEAE /* SpectralViewController.swift in Sources */,
+				24E4C44F275A64BF0099009B /* FAQViewController.swift in Sources */,
 				24A3186E273EBA730049EEAE /* SpectralView.swift in Sources */,
 				71389CCB272C1D1800BC14C0 /* SceneDelegate.swift in Sources */,
 			);
