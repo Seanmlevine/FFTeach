@@ -28,7 +28,7 @@ class SpecViewController: UIViewController {
         audioSpectrogram.startRunning()
         
         let zeroHzLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 21))
-        zeroHzLabel.center = CGPoint(x: spectrogramContainer.frame.minX+5, y: spectrogramContainer.frame.maxY - 12)
+        zeroHzLabel.center = CGPoint(x: spectrogramContainer.frame.minX+6, y: spectrogramContainer.frame.maxY + 20)
         
         zeroHzLabel.textAlignment = .center
         zeroHzLabel.text = "0 Hz"
@@ -36,7 +36,7 @@ class SpecViewController: UIViewController {
         zeroHzLabel.font = zeroHzLabel.font.withSize(9)
         
         let twentykHzLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 21))
-        twentykHzLabel.center = CGPoint(x: spectrogramContainer.frame.minX+5, y: spectrogramContainer.frame.minY + 110)
+        twentykHzLabel.center = CGPoint(x: spectrogramContainer.frame.minX+6, y: spectrogramContainer.frame.minY + 110)
         
         twentykHzLabel.textAlignment = .center
         twentykHzLabel.text = "20 kHz"
@@ -44,7 +44,7 @@ class SpecViewController: UIViewController {
         twentykHzLabel.font = zeroHzLabel.font.withSize(9)
         
         let yaxisLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 21))
-        yaxisLabel.center = CGPoint(x: spectrogramContainer.frame.minX+5, y: spectrogramContainer.frame.midY + 45)
+        yaxisLabel.center = CGPoint(x: spectrogramContainer.frame.minX+6, y: spectrogramContainer.frame.midY + 68)
         
         yaxisLabel.textAlignment = .center
         yaxisLabel.text = "FREQUENCY (Hz)"
@@ -55,9 +55,7 @@ class SpecViewController: UIViewController {
         self.view.addSubview(twentykHzLabel)
         self.view.addSubview(yaxisLabel)
         
-        // Sets the text to be stored within the "spectrogramText" object
-        spectrogramText.text = "This is the text that will go in the label below the Spectrogram. This should be able to currently hold up to 25 lines of text. If it needs to hold more, just let me know."
-        
+        spectrogramText.text = "Above is a spectrogram capturing real time audio! The content of the graph moves left to right with the newest content appearing on the right side of the screen. The spectrogram has the Y-Axis representing frequency ranging from 0 Hz to 20 kHz. There is also 4 different numbers representing FRAME SIZE. FRAME SIZE in a simple aspect, changes the spectrogram resolution. The bigger the frame size, the less clear the graph becomes."
         //THIS PART IS IMPORTANT! These two lines of code make "label1" capable of containing multi-line text.
         spectrogramText.lineBreakMode = .byWordWrapping
         spectrogramText.numberOfLines = 0

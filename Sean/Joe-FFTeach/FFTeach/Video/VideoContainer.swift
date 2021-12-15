@@ -43,4 +43,8 @@ class VideoContainer: UIView {
         avPlayer = AVPlayer(url: fileURL)
         playerController.player = avPlayer
     }
+    
+    func stopVideo(withName name: String) {
+        avPlayer.pause()
+    }
 }

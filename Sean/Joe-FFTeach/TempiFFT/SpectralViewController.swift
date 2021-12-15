@@ -44,11 +44,11 @@ class SpectralViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        audioInput.startRecording()
+        //super.viewDidAppear(animated)
+        //audioInput.startRecording()
     }
     override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
+        //super.viewDidDisappear(animated)
         audioInput.stopRecording()
     }
     

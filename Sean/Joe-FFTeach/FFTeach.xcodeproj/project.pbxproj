@@ -42,13 +42,9 @@
 		71389CEC272C1D1A00BC14C0 /* FFTeachUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71389CEB272C1D1A00BC14C0 /* FFTeachUITestsLaunchTests.swift */; };
 		71389CFA272C1D8600BC14C0 /* AudioSpectrogram+AVCaptureAudioDataOutputSampleBufferDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71389CF9272C1D8600BC14C0 /* AudioSpectrogram+AVCaptureAudioDataOutputSampleBufferDelegate.swift */; };
 		71389CFC272C1D9700BC14C0 /* AudioSpectrogram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71389CFB272C1D9700BC14C0 /* AudioSpectrogram.swift */; };
-		71389D01272C1E4200BC14C0 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71389D00272C1E4200BC14C0 /* VideoViewController.swift */; };
-		71389D05272C1F4A00BC14C0 /* BassDrum.mov in Resources */ = {isa = PBXBuildFile; fileRef = 71389D04272C1F4A00BC14C0 /* BassDrum.mov */; };
-		71389D07272C1F5300BC14C0 /* Noise.mov in Resources */ = {isa = PBXBuildFile; fileRef = 71389D06272C1F5300BC14C0 /* Noise.mov */; };
-		71389D09272C1F5800BC14C0 /* PianoCScale.mov in Resources */ = {isa = PBXBuildFile; fileRef = 71389D08272C1F5800BC14C0 /* PianoCScale.mov */; };
-		71389D0B272C1F5E00BC14C0 /* Snare.mov in Resources */ = {isa = PBXBuildFile; fileRef = 71389D0A272C1F5E00BC14C0 /* Snare.mov */; };
-		71389D0D272C1F6300BC14C0 /* SongFile.mov in Resources */ = {isa = PBXBuildFile; fileRef = 71389D0C272C1F6300BC14C0 /* SongFile.mov */; };
-		71389D0F272C1F6800BC14C0 /* SquareWave.mov in Resources */ = {isa = PBXBuildFile; fileRef = 71389D0E272C1F6800BC14C0 /* SquareWave.mov */; };
+		716C1CDF275E0C4D00339440 /* SongFileSpec.mov in Resources */ = {isa = PBXBuildFile; fileRef = 716C1CDE275E0C4D00339440 /* SongFileSpec.mov */; };
+		719F5CD9275E4EE300355289 /* NoiseFreq.mov in Resources */ = {isa = PBXBuildFile; fileRef = 719F5CD8275E4EE300355289 /* NoiseFreq.mov */; };
+		719F5CDB275E4EEC00355289 /* SongFileFreq.mov in Resources */ = {isa = PBXBuildFile; fileRef = 719F5CDA275E4EEC00355289 /* SongFileFreq.mov */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,13 +104,9 @@
 		71389CEB272C1D1A00BC14C0 /* FFTeachUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFTeachUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		71389CF9272C1D8600BC14C0 /* AudioSpectrogram+AVCaptureAudioDataOutputSampleBufferDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AudioSpectrogram+AVCaptureAudioDataOutputSampleBufferDelegate.swift"; sourceTree = "<group>"; };
 		71389CFB272C1D9700BC14C0 /* AudioSpectrogram.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioSpectrogram.swift; sourceTree = "<group>"; };
-		71389D00272C1E4200BC14C0 /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
-		71389D04272C1F4A00BC14C0 /* BassDrum.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = BassDrum.mov; sourceTree = "<group>"; };
-		71389D06272C1F5300BC14C0 /* Noise.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = Noise.mov; sourceTree = "<group>"; };
-		71389D08272C1F5800BC14C0 /* PianoCScale.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = PianoCScale.mov; sourceTree = "<group>"; };
-		71389D0A272C1F5E00BC14C0 /* Snare.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = Snare.mov; sourceTree = "<group>"; };
-		71389D0C272C1F6300BC14C0 /* SongFile.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = SongFile.mov; sourceTree = "<group>"; };
-		71389D0E272C1F6800BC14C0 /* SquareWave.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = SquareWave.mov; sourceTree = "<group>"; };
+		716C1CDE275E0C4D00339440 /* SongFileSpec.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = SongFileSpec.mov; sourceTree = "<group>"; };
+		719F5CD8275E4EE300355289 /* NoiseFreq.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = NoiseFreq.mov; sourceTree = "<group>"; };
+		719F5CDA275E4EEC00355289 /* SongFileFreq.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = SongFileFreq.mov; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,7 +141,9 @@
 				246F85732755369700F5B952 /* SineWaveFreq.mov */,
 				246F85742755369700F5B952 /* SnareFreq.mov */,
 				246F85752755369700F5B952 /* PianoFreq.mov */,
+				719F5CDA275E4EEC00355289 /* SongFileFreq.mov */,
 				246F85762755369700F5B952 /* SquareWaveFreq.mov */,
+				719F5CD8275E4EE300355289 /* NoiseFreq.mov */,
 			);
 			path = "Freq Response Examples wSound";
 			sourceTree = "<group>";
@@ -157,6 +151,7 @@
 		246F857E2755376D00F5B952 /* Spectrogram Examples wSound */ = {
 			isa = PBXGroup;
 			children = (
+				716C1CDE275E0C4D00339440 /* SongFileSpec.mov */,
 				246F857F2755376D00F5B952 /* BassDrumSpec.mov */,
 				246F85802755376D00F5B952 /* SnareSpec.mov */,
 				246F85812755376D00F5B952 /* PianoSpec.mov */,
@@ -184,7 +179,6 @@
 			isa = PBXGroup;
 			children = (
 				24A31878273EBBA20049EEAE /* VideoContainer.swift */,
-				71389D00272C1E4200BC14C0 /* VideoViewController.swift */,
 				24A3187B273EBC670049EEAE /* SpectrogramExampleViewController.swift */,
 				246F858D2755386E00F5B952 /* FreqExampleViewController.swift */,
 			);
@@ -218,7 +212,6 @@
 				24A3185D273EBA730049EEAE /* TempiFFT */,
 				246F85712755369700F5B952 /* Freq Response Examples wSound */,
 				246F857E2755376D00F5B952 /* Spectrogram Examples wSound */,
-				71389CFF272C1DF000BC14C0 /* SpectrogramExamples */,
 				71389CDE272C1D1A00BC14C0 /* FFTeachTests */,
 				71389CE8272C1D1A00BC14C0 /* FFTeachUITests */,
 				71389CC6272C1D1800BC14C0 /* Products */,
@@ -267,19 +260,6 @@
 				71389CEB272C1D1A00BC14C0 /* FFTeachUITestsLaunchTests.swift */,
 			);
 			path = FFTeachUITests;
-			sourceTree = "<group>";
-		};
-		71389CFF272C1DF000BC14C0 /* SpectrogramExamples */ = {
-			isa = PBXGroup;
-			children = (
-				71389D04272C1F4A00BC14C0 /* BassDrum.mov */,
-				71389D06272C1F5300BC14C0 /* Noise.mov */,
-				71389D08272C1F5800BC14C0 /* PianoCScale.mov */,
-				71389D0A272C1F5E00BC14C0 /* Snare.mov */,
-				71389D0C272C1F6300BC14C0 /* SongFile.mov */,
-				71389D0E272C1F6800BC14C0 /* SquareWave.mov */,
-			);
-			path = SpectrogramExamples;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -387,23 +367,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				246F858C2755376D00F5B952 /* SquareWaveSpec.mov in Resources */,
-				71389D07272C1F5300BC14C0 /* Noise.mov in Resources */,
 				246F85862755376D00F5B952 /* BassDrumSpec.mov in Resources */,
 				246F85782755369700F5B952 /* BassDrumFreq.mov in Resources */,
 				246F85872755376D00F5B952 /* SnareSpec.mov in Resources */,
-				71389D09272C1F5800BC14C0 /* PianoCScale.mov in Resources */,
 				246F85792755369700F5B952 /* SineWaveFreq.mov in Resources */,
+				716C1CDF275E0C4D00339440 /* SongFileSpec.mov in Resources */,
 				71389CD5272C1D1900BC14C0 /* LaunchScreen.storyboard in Resources */,
-				71389D0D272C1F6300BC14C0 /* SongFile.mov in Resources */,
+				719F5CDB275E4EEC00355289 /* SongFileFreq.mov in Resources */,
 				246F857C2755369700F5B952 /* SquareWaveFreq.mov in Resources */,
-				71389D0F272C1F6800BC14C0 /* SquareWave.mov in Resources */,
-				71389D05272C1F4A00BC14C0 /* BassDrum.mov in Resources */,
 				246F85892755376D00F5B952 /* NoiseSpec.mov in Resources */,
 				246F858B2755376D00F5B952 /* SineWaveSpec.mov in Resources */,
 				246F85882755376D00F5B952 /* PianoSpec.mov in Resources */,
-				71389D0B272C1F5E00BC14C0 /* Snare.mov in Resources */,
 				71389CD2272C1D1900BC14C0 /* Assets.xcassets in Resources */,
 				246F857A2755369700F5B952 /* SnareFreq.mov in Resources */,
+				719F5CD9275E4EE300355289 /* NoiseFreq.mov in Resources */,
 				246F857B2755369700F5B952 /* PianoFreq.mov in Resources */,
 				71389CD0272C1D1800BC14C0 /* Main.storyboard in Resources */,
 			);
@@ -435,7 +412,6 @@
 				24A31874273EBA730049EEAE /* TempiAudioInput.swift in Sources */,
 				246F858E2755386E00F5B952 /* FreqExampleViewController.swift in Sources */,
 				24A3186B273EBA730049EEAE /* TempiDebug.swift in Sources */,
-				71389D01272C1E4200BC14C0 /* VideoViewController.swift in Sources */,
 				24E4C44D275A648D0099009B /* FAQView.swift in Sources */,
 				24E4C452275A6B9E0099009B /* Extensions.swift in Sources */,
 				24A31873273EBA730049EEAE /* TempiUtilities.swift in Sources */,
@@ -627,7 +603,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = J4DS5LF993;
+				DEVELOPMENT_TEAM = 4RM882HVFW;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FFTeach/Info.plist;
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Analyze Audio";
@@ -641,7 +617,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = SeanLevine.FFTeach;
+				PRODUCT_BUNDLE_IDENTIFIER = JoeTaylor.FFTeach;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -656,7 +632,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = J4DS5LF993;
+				DEVELOPMENT_TEAM = 4RM882HVFW;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FFTeach/Info.plist;
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Analyze Audio";
@@ -670,7 +646,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = SeanLevine.FFTeach;
+				PRODUCT_BUNDLE_IDENTIFIER = JoeTaylor.FFTeach;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -685,7 +661,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = F99PDFL89P;
+				DEVELOPMENT_TEAM = 4RM882HVFW;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -710,7 +686,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = F99PDFL89P;
+				DEVELOPMENT_TEAM = 4RM882HVFW;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -734,7 +710,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = F99PDFL89P;
+				DEVELOPMENT_TEAM = 4RM882HVFW;
 				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -757,7 +733,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = F99PDFL89P;
+				DEVELOPMENT_TEAM = 4RM882HVFW;
 				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
